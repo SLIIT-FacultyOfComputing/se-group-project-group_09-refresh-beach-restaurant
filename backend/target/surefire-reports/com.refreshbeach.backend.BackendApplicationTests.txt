@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.refreshbeach.backend.BackendApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.664 s -- in com.refreshbeach.backend.BackendApplicationTests
