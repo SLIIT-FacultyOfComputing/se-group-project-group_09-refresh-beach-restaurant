@@ -231,14 +231,16 @@ const PrimaryButton = styled(Button)`
 `
 
 const OutlineButton = styled(Button)`
-  background-color: transparent;
+  background-color:rgb(222, 225, 233);
   color: #0f172a;
-  border: 1px solid #e5e7eb;
-  width: 100%;
+  border: 3px solid #e5e7eb;
+  width: 30%;
   margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
   
   &:hover {
-    background-color:rgb(212, 213, 217);
+    background-color:rgb(178, 180, 190);
   }
 `
 
