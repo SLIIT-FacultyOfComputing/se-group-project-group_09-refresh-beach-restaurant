@@ -23,4 +23,10 @@ public class AuthController {
     public AuthResponse login(@RequestBody AuthRequest authRequest) {
         return authService.login(authRequest);
     }
+
+    /* Forgot Password Endpoint
+    @PostMapping("/forgot-password")
+    public String forgotPassword(@RequestBody String email) {
+        return authService.forgotPassword(email);
+    }*/
 }

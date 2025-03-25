@@ -1,17 +1,31 @@
 package com.bskjp.refresh.restaurant.model;
 
-public class User {
+import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
+
+import java.util.Collection;
+import java.util.List;
+
+@Entity
+@Table(name = "users")
+public class User implements UserDetails {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String username;
     private String password;
     private String email;
     private String phone;
     private String address;
+
+    @Enumerated(EnumType.STRING)
     private USER_ROLE role;
 
-
-    // Manually add getters and setters
+    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -68,5 +82,37 @@ public class User {
         this.role = role;
     }
 
+    // Spring Security Methods
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return role != null ? List.of(() -> role.name()) : List.of();
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
+    }
+
+    public User orElseThrow(Object userNotFound) {
+        if (this == null) {
+            throw new RuntimeException(userNotFound.toString());
+        }
+        return this;
+    }
 
 }

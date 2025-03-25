@@ -1,4 +1,4 @@
-package com.bskjp.refresh.resturant.security;
+package com.bskjp.refresh.restaurant.security;
 
 public class JwtTokenProvider {
 }
