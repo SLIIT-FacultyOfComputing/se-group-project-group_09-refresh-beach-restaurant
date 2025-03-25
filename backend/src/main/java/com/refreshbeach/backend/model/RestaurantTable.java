@@ -1,5 +1,6 @@
 package com.refreshbeach.backend.model;
 
+import com.refreshbeach.backend.converter.LocationConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,7 +25,7 @@ public class RestaurantTable {
     
     private Integer capacity;
     
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = LocationConverter.class)
     private Location location;
     
     @Enumerated(EnumType.STRING)

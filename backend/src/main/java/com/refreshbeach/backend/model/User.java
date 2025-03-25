@@ -19,11 +19,18 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
+    @Column(unique = true)
     private String email;
+    
     private String fullName;
-    private String password;
+    
+    @Column(unique = true)
     private String username;
+    
+    private String password;
+    
     private String phoneNumber;
+    
     private Timestamp createdAt;
     
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL)

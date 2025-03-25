@@ -48,8 +48,8 @@ public class TableController {
         dto.setTableId(table.getTableId());
         dto.setTableNumber(table.getTableNumber());
         dto.setCapacity(table.getCapacity());
-        dto.setLocation(table.getLocation().toString());
-        dto.setStatus(table.getStatus().toString());
+        dto.setLocation(table.getLocation() != null ? table.getLocation().name() : null);
+        dto.setStatus(table.getStatus() != null ? table.getStatus().toString() : null);
         return dto;
     }
 } 
