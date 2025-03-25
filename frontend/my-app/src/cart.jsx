@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled from "styled-components"
 
 // Global styles for the font
@@ -14,6 +14,7 @@ const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 1rem;
+  
 `
 
 const Header = styled.div`
@@ -24,8 +25,9 @@ const Header = styled.div`
 `
 
 const Title = styled.h1`
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: 700;
+  padding: 10px;
 `
 
 const EmptyCartContainer = styled.div`
@@ -73,7 +75,6 @@ const CardContent = styled.div`
   padding: 1.5rem;
 `
 
-// Removed max-height constraint to show all items without scrolling
 const CartContent = styled.div`
   padding-right: 0.5rem;
 `
@@ -113,6 +114,7 @@ const ItemHeader = styled.div`
 
 const ItemName = styled.h3`
   font-weight: 500;
+  margin-bottom: 0.02rem;
 `
 
 const ItemPrice = styled.span`
@@ -122,7 +124,7 @@ const ItemPrice = styled.span`
 const ItemDescription = styled.p`
   font-size: 0.875rem;
   color: #6b7280;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 `
 
 const ItemActions = styled.div`
@@ -151,6 +153,11 @@ const QuantityButton = styled.button`
   &:hover {
     background-color: #f3f4f6;
   }
+  
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
 `
 
 const QuantityText = styled.span`
@@ -161,16 +168,12 @@ const QuantityText = styled.span`
 const RemoveButton = styled.button`
   background: none;
   border: none;
-  height: 2rem;
-  width: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: #ef4444;
   cursor: pointer;
+  font-size: 0.875rem;
   
   &:hover {
-    background-color: #f3f4f6;
+    text-decoration: underline;
   }
 `
 
@@ -235,7 +238,7 @@ const OutlineButton = styled(Button)`
   margin-top: 1rem;
   
   &:hover {
-    background-color: #f3f4f6;
+    background-color:rgb(212, 213, 217);
   }
 `
 
@@ -246,12 +249,32 @@ const DeliveryNote = styled.p`
   margin-top: 1rem;
 `
 
+const ErrorContainer = styled.div`
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  color: #b91c1c;
+`
+
+const RetryButton = styled(Button)`
+  background-color: #0f172a;
+  color: white;
+  border: none;
+  margin-top: 0.5rem;
+  
+  &:hover {
+    background-color: #1e293b;
+  }
+`
+
 // Icons
 const ShoppingCartIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="40"
+    height="40"
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -262,38 +285,6 @@ const ShoppingCartIcon = () => (
     <circle cx="8" cy="21" r="1" />
     <circle cx="19" cy="21" r="1" />
     <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
-  </svg>
-)
-
-const PlusIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M12 5v14M5 12h14" />
-  </svg>
-)
-
-const MinusIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M5 12h14" />
   </svg>
 )
 
@@ -315,59 +306,147 @@ const TrashIcon = () => (
   </svg>
 )
 
-// Sample cart data
-const initialCartItems = [
-  {
-    id: 1,
-    name: "Margherita Pizza",
-    description: "Classic tomato sauce with mozzarella cheese and fresh basil",
-    price: 3900.0,
-    quantity: 1,
-    image: "https://simplyhomecooked.com/wp-content/uploads/2023/04/Margherita-Pizza-3.jpg",
-  },
-  {
-    id: 2,
-    name: "Battered Prawn",
-    description: "Crispy, golden-battered prawns served with a tangy dipping sauce.",
-    price: 3400.0,
-    quantity: 2,
-    image:
-      "https://i0.wp.com/jessicasglutenfreekitchen.com/wp-content/uploads/2019/08/IMG_0959-1-1.jpg?fit=1440%2C1440&ssl=1",
-  },
-  {
-    id: 3,
-    name: "Roasted Full Chicken",
-    description: "Succulent whole roasted chicken, perfectly seasoned and cooked to golden perfection.",
-    price: 2400.0,
-    quantity: 1,
-    image: "https://static.toiimg.com/thumb/53007558.cms?imgsize=518651&width=800&height=800",
-  },
-]
 
 export default function CartPage() {
-  const [cartItems, setCartItems] = useState(initialCartItems)
+  const [cartItems, setCartItems] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+  const [usingMockData, setUsingMockData] = useState(false)
 
-  const updateQuantity = (id, newQuantity) => {
+  // Fetch cart items from backend using fetch API
+  const fetchCartItems = async () => {
+    setLoading(true)
+    setError(null)
+
+    try {
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 5000) // 5 second timeout
+
+      const response = await fetch("http://localhost:8080/cart", {
+        signal: controller.signal,
+      })
+
+      clearTimeout(timeoutId)
+
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status} ${response.statusText}`)
+      }
+
+      const data = await response.json()
+
+      if (Array.isArray(data)) {
+        setCartItems(data)
+        setUsingMockData(false)
+      } else {
+        throw new Error("Invalid data structure received from API")
+      }
+    } catch (error) {
+      console.error("Error fetching cart data:", error)
+
+
+      // Use mock data as fallback
+      setCartItems(mockCartItems)
+      setUsingMockData(true)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => {
+    fetchCartItems()
+  }, [])
+
+  // Update quantity in the backend and locally
+  const updateQuantity = async (id, newQuantity) => {
     if (newQuantity < 1) return
+
+    // First update locally for immediate UI feedback
     setCartItems(cartItems.map((item) => (item.id === id ? { ...item, quantity: newQuantity } : item)))
+
+    // If using mock data, don't try to update the backend
+    if (usingMockData) return
+
+    try {
+      const response = await fetch(`http://localhost:8080/cart/${id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ quantity: newQuantity }),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to update quantity")
+      }
+    } catch (error) {
+      console.error("Error updating item quantity:", error)
+      // The local UI is already updated,
+    }
   }
 
-  const removeItem = (id) => {
+  // Remove item from the backend and update 
+  const removeItem = async (id) => {
+    // First update locally for immediate UI feedback
     setCartItems(cartItems.filter((item) => item.id !== id))
+
+    // If using mock data, don't try to update the backend
+    if (usingMockData) return
+
+    try {
+      const response = await fetch(`http://localhost:8080/cart/${id}`, {
+        method: "DELETE",
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to remove item")
+      }
+    } catch (error) {
+      console.error("Error removing item:", error)
+      // In a production app, you might want to show a toast notification
+      // about the sync error and potentially refetch the cart
+    }
   }
 
-  const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
-  const tax = subtotal * 0.08 // 8% tax
-  const deliveryFee = 270.0
-  const total = subtotal + tax + deliveryFee
+  // Helper function to calculate cart totals
+  const calculateTotals = () => {
+    const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
+    const tax = subtotal * 0.02 // 8% tax
+    const deliveryFee = 270.0
+    const total = subtotal + tax + deliveryFee
+
+    return { subtotal, tax, deliveryFee, total }
+  }
+
+  const { subtotal, tax, deliveryFee, total } = calculateTotals()
+
+  if (loading) {
+    return (
+      <Container>
+        <div className="flex items-center justify-center h-64">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-gray-900 mx-auto mb-4"></div>
+            <p>Loading your cart...</p>
+          </div>
+        </div>
+      </Container>
+    )
+  }
 
   return (
     <GlobalStyle>
       <Container>
         <Header>
           <ShoppingCartIcon />
-          <Title>Your Cart</Title>
+
+          <Title>  Shopping Cart</Title>
         </Header>
+
+        {error && (
+          <ErrorContainer>
+            <p>{error}</p>
+            <RetryButton onClick={fetchCartItems}>Retry Connection</RetryButton>
+          </ErrorContainer>
+        )}
 
         {cartItems.length === 0 ? (
           <EmptyCartContainer>
@@ -375,76 +454,69 @@ export default function CartPage() {
               <ShoppingCartIcon />
             </EmptyCartIcon>
             <EmptyCartTitle>Your cart is empty</EmptyCartTitle>
-            <EmptyCartText>Looks like you haven't added any items to your cart yet.</EmptyCartText>
-            <PrimaryButton>Browse Menu</PrimaryButton>
+            <EmptyCartText>Looks like you haven't added anything to your cart yet.</EmptyCartText>
+            <OutlineButton>Continue Shopping</OutlineButton>
           </EmptyCartContainer>
         ) : (
           <GridContainer>
-            <Card>
-              <CardContent>
-                <CartContent>
-                  {cartItems.map((item) => (
-                    <CartItem key={item.id}>
-                      <ItemContainer>
-                        <ImageContainer>
-                          <ItemImage src={item.image || "/placeholder.svg"} alt={item.name} />
-                        </ImageContainer>
-                        <ItemDetails>
-                          <ItemHeader>
-                            <ItemName>{item.name}</ItemName>
-                            <ItemPrice>Rs. {(item.price * item.quantity).toFixed(2)}</ItemPrice>
-                          </ItemHeader>
-                          <ItemDescription>{item.description}</ItemDescription>
-                          <ItemActions>
-                            <QuantityControl>
-                              <QuantityButton onClick={() => updateQuantity(item.id, item.quantity - 1)}>
-                                <MinusIcon />
-                              </QuantityButton>
-                              <QuantityText>{item.quantity}</QuantityText>
-                              <QuantityButton onClick={() => updateQuantity(item.id, item.quantity + 1)}>
-                                <PlusIcon />
-                              </QuantityButton>
-                            </QuantityControl>
-                            <RemoveButton onClick={() => removeItem(item.id)}>
+            <CartContent>
+              {cartItems.map((item) => (
+                <CartItem key={item.id}>
+                  <ItemContainer>
+                    <ImageContainer>
+                      <ItemImage src={item.imageUrl || "/placeholder.svg"} alt={item.name} />
+                    </ImageContainer>
+                    <ItemDetails>
+                      <ItemHeader>
+                        <ItemName>{item.name}</ItemName>
+                        <ItemPrice>LKR {item.price.toFixed(2)}</ItemPrice>
+                      </ItemHeader>
+                      <ItemDescription>{item.description}</ItemDescription>
+                      <ItemActions>
+                        <QuantityControl>
+                          <QuantityButton
+                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                            disabled={item.quantity <= 1}
+                          >
+                            -
+                          </QuantityButton>
+                          <QuantityText>{item.quantity}</QuantityText>
+                          <QuantityButton onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</QuantityButton>
+                        </QuantityControl>
+                        <RemoveButton onClick={() => removeItem(item.id)}>
                               <TrashIcon />
                             </RemoveButton>
-                          </ItemActions>
-                        </ItemDetails>
-                      </ItemContainer>
-                      <Divider />
-                    </CartItem>
-                  ))}
-                </CartContent>
+                      </ItemActions>
+                    </ItemDetails>
+                  </ItemContainer>
+                  <Divider />
+                </CartItem>
+              ))}
+            </CartContent>
+            <Card>
+              <CardContent>
+                <SummaryTitle>Order Summary</SummaryTitle>
+                <SummaryItem>
+                  <SummaryLabel>Subtotal</SummaryLabel>
+                  <SummaryValue>LKR {subtotal.toFixed(2)}</SummaryValue>
+                </SummaryItem>
+                <SummaryItem>
+                  <SummaryLabel>Tax (2%)</SummaryLabel>
+                  <SummaryValue>LKR {tax.toFixed(2)}</SummaryValue>
+                </SummaryItem>
+                <SummaryItem>
+                  <SummaryLabel>Delivery Fee</SummaryLabel>
+                  <SummaryValue>LKR {deliveryFee.toFixed(2)}</SummaryValue>
+                </SummaryItem>
+                <Divider />
+                <TotalItem>
+                  <SummaryLabel>Total</SummaryLabel>
+                  <SummaryValue>LKR {total.toFixed(2)}</SummaryValue>
+                </TotalItem>
+                <PrimaryButton>Checkout</PrimaryButton>
+                <DeliveryNote>Delivery usually takes 5-10 business days.</DeliveryNote>
               </CardContent>
             </Card>
-
-            <div>
-              <Card>
-                <CardContent>
-                  <SummaryTitle>Order Summary</SummaryTitle>
-                  <SummaryItem>
-                    <SummaryLabel>Subtotal</SummaryLabel>
-                    <SummaryValue>Rs. {subtotal.toFixed(2)}</SummaryValue>
-                  </SummaryItem>
-                  <SummaryItem>
-                    <SummaryLabel>Tax</SummaryLabel>
-                    <SummaryValue>Rs. {tax.toFixed(2)}</SummaryValue>
-                  </SummaryItem>
-                  <SummaryItem>
-                    <SummaryLabel>Delivery Fee</SummaryLabel>
-                    <SummaryValue>Rs. {deliveryFee.toFixed(2)}</SummaryValue>
-                  </SummaryItem>
-                  <Divider />
-                  <TotalItem>
-                    <span>Total</span>
-                    <span>Rs. {total.toFixed(2)}</span>
-                  </TotalItem>
-                  <PrimaryButton>Proceed to Checkout</PrimaryButton>
-                  <DeliveryNote>Estimated delivery time: 30-45 minutes</DeliveryNote>
-                </CardContent>
-              </Card>
-              <OutlineButton>Continue Shopping</OutlineButton>
-            </div>
           </GridContainer>
         )}
       </Container>
