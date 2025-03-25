@@ -16,10 +16,8 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        // Forward to home page so that route is preserved
-        registry.addViewController("/{x:[\\w\\-]+}")
-                .setViewName("forward:/index.html");
-        registry.addViewController("/{x:^(?!api$).*$}/**")
+        // Forward root to index.html
+        registry.addViewController("/")
                 .setViewName("forward:/index.html");
     }
 } 

@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/controller/ReservationControllerSimple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/controller/TableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/controller/TableController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/model/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/model/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/model/ReservationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/model/ReservationStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/model/RestaurantTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/model/RestaurantTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/css/main.491d9d5a.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/css/main.491d9d5a.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/453.8ab44547.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/453.8ab44547.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5978d676.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5978d676.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5978d676.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/CalendarPicker.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/CalendarPicker.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/ReservationForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/ReservationForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/TableLayout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/TimeSlotSelector.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/TimeSlotSelector.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +380,7 @@
       <workItem from="1742805047396" duration="1951000" />
       <workItem from="1742817213128" duration="4970000" />
       <workItem from="1742836124164" duration="866000" />
-      <workItem from="1742837002035" duration="12891000" />
+      <workItem from="1742837002035" duration="23089000" />
     </task>
     <servers />
   </component>

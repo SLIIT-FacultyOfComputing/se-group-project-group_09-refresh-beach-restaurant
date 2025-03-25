@@ -1,17 +1,27 @@
 import React from "react";
 
 const TimeSlotSelector = ({ selectedTime, setSelectedTime }) => {
-    const timeSlots = ["7:00 AM","8:00 AM","9:00 AM","10:00 AM", "12:00 PM", "1:00 PM", "2:00 PM", "3:00 PM","4:00 AM","5:00 AM","6:00 PM", "7:00 PM", "8:00 PM", "9:00 AM","10:00 AM","11:00 AM"];
+    // Create time slots from 9 AM to 9 PM (restaurant hours)
+    const timeSlots = [];
+    for (let hour = 9; hour <= 21; hour++) {
+        // Format in 24-hour format for API compatibility
+        const formattedHour = hour.toString().padStart(2, '0');
+        timeSlots.push(`${formattedHour}:00`);
+        timeSlots.push(`${formattedHour}:30`);
+    }
 
     return (
         <div className="mb-4">
-            <label className="block mb-1 font-semibold">Select a Time</label>
+            <label className="block text-yellow-600 font-semibold mb-2">
+                Select Time
+            </label>
             <select
-                className="border p-2 rounded w-full"
                 value={selectedTime}
                 onChange={(e) => setSelectedTime(e.target.value)}
+                className="w-full p-2 border rounded bg-white"
+                required
             >
-                <option value="">-- Choose Time --</option>
+                <option value="">Choose a time</option>
                 {timeSlots.map((time) => (
                     <option key={time} value={time}>
                         {time}
