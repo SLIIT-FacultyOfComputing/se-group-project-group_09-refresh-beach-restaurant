@@ -41,11 +41,11 @@ const EmptyCartContainer = styled.div`
 const EmptyCartIcon = styled.div`
   font-size: 4rem;
   margin-bottom: 1rem;
-  color: #6b7280;
+  color:rgb(156, 2, 2);
 `
 
 const EmptyCartTitle = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 `
@@ -53,6 +53,7 @@ const EmptyCartTitle = styled.h2`
 const EmptyCartText = styled.p`
   color: #6b7280;
   margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 `
 
 const GridContainer = styled.div`
