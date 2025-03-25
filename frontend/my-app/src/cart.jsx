@@ -363,7 +363,7 @@ export default function CartPage() {
     // First update locally for immediate UI feedback
     setCartItems(cartItems.map((item) => (item.id === id ? { ...item, quantity: newQuantity } : item)))
 
-    // If using mock data, don't try to update the backend
+    // If using mock data, 
     if (usingMockData) return
 
     try {
@@ -380,7 +380,7 @@ export default function CartPage() {
       }
     } catch (error) {
       console.error("Error updating item quantity:", error)
-      // The local UI is already updated,
+      //  UI is updated,
     }
   }
 
@@ -389,7 +389,7 @@ export default function CartPage() {
     // First update locally for immediate UI feedback
     setCartItems(cartItems.filter((item) => item.id !== id))
 
-    // If using mock data, don't try to update the backend
+    
     if (usingMockData) return
 
     try {
@@ -402,15 +402,14 @@ export default function CartPage() {
       }
     } catch (error) {
       console.error("Error removing item:", error)
-      // In a production app, you might want to show a toast notification
-      // about the sync error and potentially refetch the cart
+  
     }
   }
 
   // Helper function to calculate cart totals
   const calculateTotals = () => {
     const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
-    const tax = subtotal * 0.02 // 8% tax
+    const tax = subtotal * 0.02 // 2% tax
     const deliveryFee = 270.0
     const total = subtotal + tax + deliveryFee
 
