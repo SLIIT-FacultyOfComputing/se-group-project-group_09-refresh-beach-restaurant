@@ -1,11 +1,11 @@
 package com.bskjp.refresh.restaurant.security;
+
 import com.bskjp.refresh.restaurant.service.UserDetailsServiceImpl;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
@@ -16,11 +16,16 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import java.io.IOException;
 
 @Component // Ensure this annotation is present
-@RequiredArgsConstructor // Lombok annotation to generate constructor injection
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil; // Automatically injected by Spring
     private final UserDetailsServiceImpl userDetailsService; // Automatically injected by Spring
+
+    // Explicit constructor injection (without Lombok)
+    public JwtAuthenticationFilter(JwtUtil jwtUtil, UserDetailsServiceImpl userDetailsService) {
+        this.jwtUtil = jwtUtil;
+        this.userDetailsService = userDetailsService;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)

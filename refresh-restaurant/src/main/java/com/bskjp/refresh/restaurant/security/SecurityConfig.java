@@ -14,16 +14,18 @@ import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
-@NoArgsConstructor  //  Lombok-generated default constructor
+@NoArgsConstructor(force = true)  // Lombok-generated default constructor
 public class SecurityConfig {
 
-    private JwtAuthenticationFilter jwtAuthenticationFilter;
-    private UserDetailsServiceImpl userDetailsService;
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
+    private final UserDetailsServiceImpl userDetailsService;
+    private final JwtUtil jwtUtil;
 
-    // Explicitly initialize fields in the default constructor
-    public SecurityConfig() {
-        this.jwtAuthenticationFilter = new JwtAuthenticationFilter();
-        this.userDetailsService = new UserDetailsServiceImpl();
+    // Constructor injection for required dependencies
+    public SecurityConfig(JwtUtil jwtUtil, UserDetailsServiceImpl userDetailsService) {
+        this.jwtUtil = jwtUtil;
+        this.userDetailsService = userDetailsService;
+        this.jwtAuthenticationFilter = new JwtAuthenticationFilter(jwtUtil, userDetailsService);
     }
 
     @Bean
