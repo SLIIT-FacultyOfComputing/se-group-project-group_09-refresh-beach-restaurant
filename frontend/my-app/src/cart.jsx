@@ -356,7 +356,7 @@ export default function CartPage() {
     fetchCartItems()
   }, [])
 
-  // Update quantity in the backend and locally
+  // Update quantity in the backend 
   const updateQuantity = async (id, newQuantity) => {
     if (newQuantity < 1) return
 
