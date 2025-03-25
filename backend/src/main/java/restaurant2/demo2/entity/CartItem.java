@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "cart_items")
+@Table(name = "cart_items") // Table name 
 @CrossOrigin
 public class CartItem {
     @Id
