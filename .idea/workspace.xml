@@ -5,13 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5a03cf0c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5a03cf0c.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5a03cf0c.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/ReservationForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/ReservationForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/cart.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/restaurant2/demo2/Demo2Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/restaurant2/demo2/Repository/CartRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/restaurant2/demo2/controller/CartController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/restaurant2/demo2/entity/CartItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/main/java/restaurant2/demo2/service/CartService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/src/test/java/restaurant2/demo2/Demo2ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/eslint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/assets/Margherita-Pizza.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/assets/images.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/assets/react.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/assets/shemins-chicken-tikka-masala.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/assets/surf-board-fork-and-palm-for-beach-restaurant-logo-resort-logo-design-vector.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/cart.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/src/main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/my-app/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,43 +184,43 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BackendApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (2).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (3).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (4).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.backend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/reservations-v2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/Y2S2/SE/Project/v1/backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BackendApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BackendApplication (1).executor": "Run",
+    "Spring Boot.BackendApplication (2).executor": "Run",
+    "Spring Boot.BackendApplication (3).executor": "Run",
+    "Spring Boot.BackendApplication (4).executor": "Run",
+    "Spring Boot.BackendApplication.executor": "Run",
+    "Spring Boot.backend.executor": "Run",
+    "git-widget-placeholder": "Merging feature/reservations-v2",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Documents/Y2S2/SE/Project/v1/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.refreshbeach.backend" />
@@ -369,7 +392,7 @@
       <workItem from="1742817213128" duration="4970000" />
       <workItem from="1742836124164" duration="866000" />
       <workItem from="1742837002035" duration="38958000" />
-      <workItem from="1743011114860" duration="540000" />
+      <workItem from="1743011114860" duration="1080000" />
     </task>
     <servers />
   </component>
