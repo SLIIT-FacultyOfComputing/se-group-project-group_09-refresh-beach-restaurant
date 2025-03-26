@@ -54,7 +54,7 @@ const ReservationForm = ({ user }) => {
                         <TableLayout selectedDate={selectedDate} selectedTime={selectedTime} />
                     ) : (
                         <div className="text-white text-xl text-center">
-                            <p>Select a date and time to view available tables</p>
+                            <p>Available Tables will appear here</p>
                         </div>
                     )}
                 </div>
