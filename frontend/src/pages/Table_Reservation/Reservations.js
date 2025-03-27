@@ -1,4 +1,4 @@
-import Reservation from "../components/reservations/Reservations";
+import Reservation from "../../components/Table_Reservation/reservations/Reservations";
 
 const Reservations = () => {
     return (
