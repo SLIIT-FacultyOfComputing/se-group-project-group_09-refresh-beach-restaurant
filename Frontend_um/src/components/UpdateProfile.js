@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import LogoutButton from './LogoutButton'; // Import LogoutButton component
 
 const MyProfile = () => {
     const { userId } = useParams();
@@ -94,7 +95,9 @@ const MyProfile = () => {
                 <button style={styles.rightButton}>My Cart</button>
                 <button style={styles.rightButton}>Edit Address</button>
                 <button style={styles.rightButton}>Payment Methods</button>
-                <button style={styles.logoutButton}>Logout</button>
+
+                {/* Replace with the LogoutButton */}
+                <LogoutButton />
             </div>
         </div>
     );
@@ -161,22 +164,12 @@ const styles = {
         border: 'none',
         borderRadius: '5px',
         backgroundColor: '#FFFFFF',
-        color: 'black', // Changed to black
+        color: 'black',
         fontSize: '16px',
         cursor: 'pointer',
         transition: '0.3s',
         marginBottom: '10px',
     },
-    logoutButton: {
-        width: '50%',
-        padding: '12px',
-        border: 'none',
-        borderRadius: '5px',
-        backgroundColor: '#007bff',
-        color: 'white',
-        fontSize: '16px',
-        cursor: 'pointer',
-    }
 };
 
 export default MyProfile;

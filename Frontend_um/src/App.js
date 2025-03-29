@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import SignUp from './components/signup';
 import Login from './components/Login';
-import LogoutButton from './components/LogoutButton';
 import UpdateProfile from './components/UpdateProfile';
 import Home from './components/Home';
 import ForgotPassword from './components/ForgotPassword';
 import AdminDashboard from './components/AdminDashboard';  // Admin Dashboard
 import UserDashboard from './components/UserDashboard';    // User Dashboard
+import LogoutButton from './components/LogoutButton';  // If LogoutButton component is used
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -29,12 +29,17 @@ function App() {
             <div>
                 {isLoggedIn && (
                     <nav style={{ padding: '20px', backgroundColor: '#f4f4f4' }}>
-                        {/* Dynamically render the dashboard link based on userRole */}
+                        {/* Render dashboard link */}
                         <Link to={userRole === 'admin' ? '/admin-dashboard' : '/user-dashboard'} style={{ marginRight: '10px' }}>
                             Dashboard
                         </Link>
-                        <Link to="/profile/1" style={{ marginRight: '10px' }}>Profile</Link>
-                        <button onClick={handleLogout}>Logout</button>
+
+                        {/* Conditionally render Profile link based on role */}
+                        {userRole !== 'admin' && (
+                            <Link to="/profile/1" style={{ marginRight: '10px' }}>
+                                Profile
+                            </Link>
+                        )}
                     </nav>
                 )}
 
@@ -47,6 +52,13 @@ function App() {
                     <Route path="/admin-dashboard" element={<AdminDashboard />} />
                     <Route path="/user-dashboard" element={<UserDashboard />} />
                 </Routes>
+
+                {/* Place logout button outside the dashboards */}
+                {isLoggedIn && (
+                    <div style={{ padding: '10px', backgroundColor: '#f4f4f4' }}>
+                        <button onClick={handleLogout}>Logout</button>
+                    </div>
+                )}
             </div>
         </Router>
     );
