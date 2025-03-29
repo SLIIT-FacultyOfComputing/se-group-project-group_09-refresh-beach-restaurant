@@ -31,6 +31,14 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
+        String requestPath = request.getRequestURI();
+
+        // Skip authentication for login and signup routes
+        if (requestPath.startsWith("/api/auth/login") || requestPath.startsWith("/api/auth/signup")) {
+            filterChain.doFilter(request, response);
+            return;  // Skip the JWT filter for these routes
+        }
+
         String authHeader = request.getHeader("Authorization");
         if (authHeader == null || !authHeader.startsWith("Bearer ")) {
             filterChain.doFilter(request, response);

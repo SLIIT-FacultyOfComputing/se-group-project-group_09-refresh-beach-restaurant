@@ -2,17 +2,16 @@ package com.bskjp.refresh.restaurant.controller;
 
 import com.bskjp.refresh.restaurant.dto.AuthRequest;
 import com.bskjp.refresh.restaurant.dto.AuthResponse;
-import com.bskjp.refresh.restaurant.model.User;
 import com.bskjp.refresh.restaurant.service.AuthService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
+@RequiredArgsConstructor
 public class AuthController {
 
-    @Autowired
-    private AuthService authService;
+    private final AuthService authService;
 
     @PostMapping("/signup")
     public AuthResponse signup(@RequestBody AuthRequest authRequest) {
@@ -24,9 +23,9 @@ public class AuthController {
         return authService.login(authRequest);
     }
 
-    /* Forgot Password Endpoint
+    /* Forgot Password Endpoint */
     @PostMapping("/forgot-password")
     public String forgotPassword(@RequestBody String email) {
         return authService.forgotPassword(email);
-    }*/
+    }
 }

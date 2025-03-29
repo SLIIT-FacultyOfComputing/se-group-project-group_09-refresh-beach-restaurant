@@ -33,8 +33,12 @@
 	<dependency>
 		<groupId>org.projectlombok</groupId>
 		<artifactId>lombok</artifactId>
-		<version>1.18.30</version>
-		<scope>provided</scope>
+
+	</dependency>
+	<!-- JSON Handling -->
+	<dependency>
+		<groupId>com.fasterxml.jackson.core</groupId>
+		<artifactId>jackson-databind</artifactId>
 	</dependency>
 
 	<!-- Jakarta Mail (Use only one version) -->
@@ -84,5 +88,3 @@
 		<scope>test</scope>
 	</dependency>
 </dependencies>
-
-
