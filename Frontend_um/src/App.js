@@ -13,6 +13,7 @@ function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userRole, setUserRole] = useState(null);  // Track user role (admin or user)
 
+    // This function is passed to Login component to handle login
     const handleLogin = (role) => {
         setIsLoggedIn(true);
         setUserRole(role);  // Set role after login (admin or user)
@@ -28,7 +29,7 @@ function App() {
             <div>
                 {isLoggedIn && (
                     <nav style={{ padding: '20px', backgroundColor: '#f4f4f4' }}>
-                        {/* Links for navigation after login */}
+                        {/* Dynamically render the dashboard link based on userRole */}
                         <Link to={userRole === 'admin' ? '/admin-dashboard' : '/user-dashboard'} style={{ marginRight: '10px' }}>
                             Dashboard
                         </Link>

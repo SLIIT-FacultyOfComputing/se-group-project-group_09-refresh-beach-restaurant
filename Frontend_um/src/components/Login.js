@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import logo from '../assets/images/logo.jpeg'; // Import the JPEG logo
-import { Link } from 'react-router-dom';
+﻿import React, { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import logo from '../assets/images/logo.jpeg'; // Import the logo image
 
-
-const Login = () => {
+const Login = ({ onLogin }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -12,16 +10,17 @@ const Login = () => {
     const handleLogin = (e) => {
         e.preventDefault();
 
-        // Simulate an API call to check login credentials
-        const mockUserData = { email: 'admin@example.com', password: 'admin', role: 'admin' }; // Replace with actual login API call
-        const mockUser = { email, password };
+        // Simulate login process (You would replace this with an actual API call)
+        const mockUserData = { email: 'admin@example.com', password: 'admin', role: 'admin' }; // Mock user data
+        const mockNormalUserData = { email: 'user@example.com', password: 'user', role: 'user' }; // Mock normal user data
 
-        if (mockUser.email === mockUserData.email && mockUser.password === mockUserData.password) {
-            // Simulating role-based redirection
-            if (mockUserData.role === 'admin') {
-                navigate('/admin-dashboard'); // Redirect to Admin Dashboard
+        if ((email === mockUserData.email && password === mockUserData.password) || (email === mockNormalUserData.email && password === mockNormalUserData.password)) {
+            const role = email === mockUserData.email ? 'admin' : 'user';  // Set role based on email
+            onLogin(role); // Set the role after login
+            if (role === 'admin') {
+                navigate('/admin-dashboard');  // Redirect to Admin Dashboard
             } else {
-                navigate('/user-dashboard'); // Redirect to User Dashboard
+                navigate('/user-dashboard');  // Redirect to User Dashboard
             }
         } else {
             alert('Invalid credentials');
@@ -29,7 +28,14 @@ const Login = () => {
     };
 
     return (
-        <div style={{ textAlign: 'center', padding: '20px' }}>
+        <div
+            style={{
+                textAlign: 'center',
+                padding: '20px',
+                background: '#ffffff', // Solid white background
+                minHeight: '100vh' // Ensure full-page height
+            }}
+        >
             {/* Display the logo */}
             <img src={logo} alt="Restaurant Logo" style={{ width: '200px', marginBottom: '20px' }} />
             <h2>Login to Refresh Restaurant</h2>
@@ -56,6 +62,7 @@ const Login = () => {
                         style={{ padding: '10px', marginBottom: '10px', width: '40%' }}
                     />
                 </div>
+
                 <button
                     type="submit"
                     style={{
