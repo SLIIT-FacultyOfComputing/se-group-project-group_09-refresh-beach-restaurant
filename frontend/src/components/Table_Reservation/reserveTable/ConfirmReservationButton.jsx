@@ -1,8 +1,30 @@
 import React, { useState } from "react";
 
-const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime }) => {
+const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableName }) => {
     const [isReserving, setIsReserving] = useState(false);
     const [reservationStatus, setReservationStatus] = useState(null);
+
+    // Helper function to convert 12-hour time format to 24-hour format
+    const convertTo24HourFormat = (timeString) => {
+        if (!timeString) return null;
+        
+        // Parse the time components
+        const [time, modifier] = timeString.split(' ');
+        let [hours, minutes] = time.split(':');
+        
+        // Convert hours to 24-hour format
+        if (hours === '12') {
+            hours = modifier === 'AM' ? '00' : '12';
+        } else if (modifier === 'PM') {
+            hours = String(parseInt(hours, 10) + 12);
+        }
+        
+        // Ensure two digits
+        hours = String(hours).padStart(2, '0');
+        
+        // Return formatted time
+        return `${hours}:${minutes}:00`;
+    };
 
     const handleConfirm = async () => {
         if (!tableId || !selectedDate || !selectedTime) {
@@ -14,24 +36,28 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime }) => {
         const formattedDate = selectedDate instanceof Date 
             ? selectedDate.toISOString().split('T')[0] 
             : selectedDate;
+            
+        // Convert time to 24-hour format
+        const formattedTime = convertTo24HourFormat(selectedTime);
+        
+        console.log("Time conversion:", selectedTime, "→", formattedTime);
 
         const reservationData = {
             tableId: tableId,
-            date: formattedDate,
-            time: selectedTime,
-            // Since we removed login, we'll hardcode guest information
-            guestName: "Guest User",
-            guestEmail: "guest@example.com",
-            guestPhone: "555-555-5555",
-            numberOfGuests: 2
+            customerId: 1, // For now, use a default customer ID
+            reservationDate: formattedDate,
+            reservationTime: formattedTime,
+            peopleCount: 2, // Default number of guests
+            contactNumber: "555-555-5555" // Default contact number
         };
 
+        console.log("Sending reservation data:", reservationData);
         setIsReserving(true);
         setReservationStatus("Reserving your table...");
 
         try {
-            // For testing without a backend, we'll simulate a successful response
-            const useTestMode = true; // Set to false when your backend is ready
+            // Set to false to use the test mode
+            const useTestMode = false; 
 
             if (useTestMode) {
                 // Simulate a network delay
@@ -39,25 +65,43 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime }) => {
                 setReservationStatus("Table reserved successfully!");
                 alert("Table reserved successfully!");
             } else {
-                // Real backend call
-                const response = await fetch("http://localhost:8081/api/reservations/reserve", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify(reservationData)
-                });
+                // Real backend call with the correct port (8085)
+                console.log("Sending reservation data to backend:", JSON.stringify(reservationData));
+                try {
+                    const backendUrl = "http://localhost:8085/api/reservations/reserve";
+                    console.log("Sending request to:", backendUrl);
+                    const response = await fetch(backendUrl, {
+                        method: "POST",
+                        credentials: "omit",
+                        headers: { 
+                            "Content-Type": "application/json",
+                            "Accept": "application/json"
+                        },
+                        body: JSON.stringify(reservationData)
+                    });
 
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
+                    console.log("Response status:", response.status);
+                    
+                    if (!response.ok) {
+                        const errorText = await response.text();
+                        console.error("Error response:", errorText);
+                        throw new Error(`HTTP error! Status: ${response.status}, Message: ${errorText}`);
+                    }
+
+                    const result = await response.json();
+                    console.log("Response data:", result);
+
+                    setReservationStatus(result.message || "Table reserved successfully!");
+                    alert(result.message || "Table reserved successfully!");
+                } catch (error) {
+                    console.error("Fetch error details:", error);
+                    throw error;
                 }
-
-                const result = await response.json();
-                setReservationStatus(result.message || "Table reserved successfully!");
-                alert(result.message || "Table reserved successfully!");
             }
         } catch (error) {
             console.error("Error:", error);
             setReservationStatus("Failed to reserve table. Please try again.");
-            alert("Failed to reserve table. Please try again or contact the restaurant directly.");
+            alert("Failed to reserve table: " + error.message);
         } finally {
             setIsReserving(false);
         }
@@ -70,7 +114,7 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime }) => {
                 onClick={handleConfirm}
                 disabled={isReserving}
             >
-                {isReserving ? "Processing..." : `Confirm Table ${tableId}`}
+                {isReserving ? "Processing..." : `Confirm Reservation`}
             </button>
             
             {reservationStatus && (
