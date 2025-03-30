@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { reservationApi } from "../../../services/api";
 
 const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime }) => {
     const [isReserving, setIsReserving] = useState(false);
     const [reservationStatus, setReservationStatus] = useState(null);
-    const navigate = useNavigate();
 
     const handleConfirm = async () => {
         if (!tableId || !selectedDate || !selectedTime) {
@@ -19,28 +16,47 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime }) => {
             : selectedDate;
 
         const reservationData = {
-            table_id: tableId,
-            reservation_date: formattedDate,
-            reservation_time: selectedTime,
-            customer_id: 1,
-            status: "Upcoming"
+            tableId: tableId,
+            date: formattedDate,
+            time: selectedTime,
+            // Since we removed login, we'll hardcode guest information
+            guestName: "Guest User",
+            guestEmail: "guest@example.com",
+            guestPhone: "555-555-5555",
+            numberOfGuests: 2
         };
 
         setIsReserving(true);
         setReservationStatus("Reserving your table...");
 
         try {
-            const result = await reservationApi.createReservation(reservationData);
-            
-            setReservationStatus("Table reserved successfully!");
-            alert("Table reserved successfully!");
-            
-            setTimeout(() => {
-                navigate("/my-reservations");
-            }, 1500);
+            // For testing without a backend, we'll simulate a successful response
+            const useTestMode = true; // Set to false when your backend is ready
+
+            if (useTestMode) {
+                // Simulate a network delay
+                await new Promise(resolve => setTimeout(resolve, 1000));
+                setReservationStatus("Table reserved successfully!");
+                alert("Table reserved successfully!");
+            } else {
+                // Real backend call
+                const response = await fetch("http://localhost:8081/api/reservations/reserve", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(reservationData)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const result = await response.json();
+                setReservationStatus(result.message || "Table reserved successfully!");
+                alert(result.message || "Table reserved successfully!");
+            }
         } catch (error) {
             console.error("Error:", error);
-            setReservationStatus(`Failed to reserve table: ${error.message}`);
+            setReservationStatus("Failed to reserve table. Please try again.");
             alert("Failed to reserve table. Please try again or contact the restaurant directly.");
         } finally {
             setIsReserving(false);
