@@ -5,11 +5,11 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/backend/pom.xml" />
+        <option value="$PROJECT_DIR$/restaurant2/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
-    <!-- Choose the JDK version that suits your project requirements -->
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

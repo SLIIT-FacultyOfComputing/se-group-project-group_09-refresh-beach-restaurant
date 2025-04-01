@@ -6,24 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/refreshbeach/backend/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/css/main.491d9d5a.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/css/main.491d9d5a.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/453.8ab44547.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/453.8ab44547.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5978d676.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5978d676.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/static/static/js/main.5978d676.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/CalendarPicker.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/CalendarPicker.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/ReservationForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/ReservationForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/TableLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/reserveTable/TimeSlotSelector.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/reserveTable/TimeSlotSelector.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/TableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/TableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,101 +57,6 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/core/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/eslint-parser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-compilation-targets/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-create-class-features-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-create-regexp-features-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/plugin-transform-runtime/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/preset-env/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@eslint/eslintrc/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@isaacs/cliui/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@istanbuljs/load-nyc-config/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@jest/reporters/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@jest/transform/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@rollup/pluginutils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@testing-library/jest-dom/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/accepts/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/acorn-globals/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/ajv-formats/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/babel-loader/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/babel-plugin-polyfill-corejs2/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/body-parser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/chokidar/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/clean-css/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/coa/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/compression/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/css-minimizer-webpack-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/csso/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/cssstyle/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/default-gateway/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/detect-port-alt/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/domexception/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/escodegen/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-import-resolver-node/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-module-utils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-import/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-jsx-a11y/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-react/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-webpack-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/express/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/fast-glob/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/file-loader/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/finalhandler/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/fork-ts-checker-webpack-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/global-prefix/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/hpack.js/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/http-proxy-middleware/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/import-fresh/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-instrument/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-report/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-source-maps/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-runtime/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-watch-typeahead/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-worker/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jsonpath/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/make-dir/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/npm-run-path/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/path-scurry/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/pkg-up/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-modules-local-by-default/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-modules-scope/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-svgo/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/pretty-format/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/prop-types/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/proxy-addr/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/raw-body/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/react-dev-utils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/react-scripts/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/regjsparser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/rollup-plugin-terser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/schema-utils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/send/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/serve-index/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/source-map-support/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/stack-utils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/static-eval/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/string-width-cjs/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/string-width/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/sucrase/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/svgo/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tailwindcss/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tempy/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/terser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tough-cookie/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tsconfig-paths/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tsutils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/v8-to-istanbul/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack-dev-server/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack-manifest-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/whatwg-encoding/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/workbox-build/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/workbox-webpack-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/write-file-atomic/package.json" />
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -173,43 +68,45 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BackendApplication.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.BackendApplication (1).executor": "Run",
-    "Spring Boot.BackendApplication (2).executor": "Run",
-    "Spring Boot.BackendApplication (3).executor": "Run",
-    "Spring Boot.BackendApplication (4).executor": "Run",
-    "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.backend.executor": "Run",
-    "git-widget-placeholder": "feature/reservations-v2",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Documents/Y2S2/SE/Project/v1/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BackendApplication (2).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BackendApplication (3).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BackendApplication (4).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Restaurant2Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.backend.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/reservations-v2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/Y2S2/SE/Project/v1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.refreshbeach.backend" />
@@ -219,7 +116,17 @@
       <recent name="C:\Users\User\Documents\Y2S2\SE\Project\v1\backend\src\main\java\com" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendApplication (4)">
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.Restaurant2Application">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="v1" />
       <method v="2">
@@ -296,6 +203,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Restaurant2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="restaurant2" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="grp_9.restaurant2.Restaurant2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.refreshbeach.backend.BackendApplication" />
@@ -314,12 +228,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.Restaurant2Application" />
       <item itemvalue="Spring Boot.backend" />
-      <item itemvalue="Spring Boot.BackendApplication (4)" />
-      <item itemvalue="Spring Boot.BackendApplication" />
       <item itemvalue="Spring Boot.BackendApplication (1)" />
       <item itemvalue="Spring Boot.BackendApplication (2)" />
       <item itemvalue="Spring Boot.BackendApplication (3)" />
+      <item itemvalue="Spring Boot.BackendApplication (4)" />
+      <item itemvalue="Spring Boot.BackendApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -380,7 +295,18 @@
       <workItem from="1742805047396" duration="1951000" />
       <workItem from="1742817213128" duration="4970000" />
       <workItem from="1742836124164" duration="866000" />
-      <workItem from="1742837002035" duration="23089000" />
+      <workItem from="1742837002035" duration="38958000" />
+      <workItem from="1743011114860" duration="1080000" />
+      <workItem from="1743270146349" duration="1246000" />
+      <workItem from="1743271818270" duration="5190000" />
+      <workItem from="1743342259087" duration="4153000" />
+      <workItem from="1743346772087" duration="51000" />
+      <workItem from="1743346945486" duration="9839000" />
+      <workItem from="1743359588037" duration="1270000" />
+      <workItem from="1743401458534" duration="293000" />
+      <workItem from="1743415593340" duration="2110000" />
+      <workItem from="1743429581804" duration="1471000" />
+      <workItem from="1743494421084" duration="8548000" />
     </task>
     <servers />
   </component>
@@ -410,5 +336,16 @@
     <option featureType="dependencySupport" implementationName="javascript:npm:cypress" />
     <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
     <option featureType="dependencySupport" implementationName="javascript:npm:postcss" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

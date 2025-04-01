@@ -1,0 +1,10 @@
+{
+  "name": "restaurant-api-test",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Test script for restaurant API",
+  "main": "test-api.js",
+  "dependencies": {
+    "node-fetch": "^3.3.0"
+  }
+} 
