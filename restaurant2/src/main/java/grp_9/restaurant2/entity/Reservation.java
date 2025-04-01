@@ -7,23 +7,47 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.sql.Timestamp;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "reserved")
+@Table(name = "reservations")
 public class Reservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "reservation_id")
     private Long id;
 
+    @Column(name = "customer_id")
+    private Long customerId;
+    
+    @Column(name = "table_id")
+    private Integer tableId;
+    
+    @Column(name = "reservation_date")
+    private LocalDate reservationDate;
+    
+    @Column(name = "reservation_time")
+    private LocalTime reservationTime;
+    
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private ReservationStatus status = ReservationStatus.UPCOMING;
+    
+    @Column(name = "created_at", updatable = false, insertable = false)
+    private Timestamp createdAt;
+    
+    // Maintain compatibility with any code that uses these fields
+    @Transient
     private int peopleCount;
+    
+    @Transient
     private double price;
+    
+    @Transient
     private String contactNumber;
-
-    private LocalDate reservationDate; // Changed to LocalDate for clarity
-    private LocalTime reservationTime; // Added LocalTime to store only time
 }
 
