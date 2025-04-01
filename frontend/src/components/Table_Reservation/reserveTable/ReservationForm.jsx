@@ -32,7 +32,7 @@ const ReservationForm = ({ user }) => {
         <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: "url('/images/reservation.jpg')" }}>
             <div className="absolute inset-0 bg-black/75 flex justify-between px-20">
                 {/* Left side - Reservation form */}
-                <div className="w-2/5 h-full flex items-center">
+                <div className="w-2/5 h-full flex items-center ml-8">
                     <div className="p-6 border border-transparent rounded shadow-md w-full max-w-md bg-blue-800">
                         <h2 className="text-xl text-yellow-600 font-bold mb-4 text-center">Reserve Your Table Here</h2>
 
