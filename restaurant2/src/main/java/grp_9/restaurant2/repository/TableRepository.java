@@ -1,5 +1,6 @@
 package grp_9.restaurant2.repository;
 
+import grp_9.restaurant2.entity.ReservationStatus;
 import grp_9.restaurant2.entity.RestaurantTable;
 import grp_9.restaurant2.entity.TableStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -22,9 +23,11 @@ public interface TableRepository extends JpaRepository<RestaurantTable, Long> {
         return findByStatus(TableStatus.AVAILABLE);
     }
     
-    // Custom query to find available tables for a specific date and time
-    @Query("SELECT t FROM RestaurantTable t LEFT JOIN Reservation r ON t.id = r.tableId " +
-           "WHERE t.status = grp_9.restaurant2.entity.TableStatus.AVAILABLE OR r.id IS NULL OR " +
-           "(r.reservationDate != :date OR r.reservationTime != :time)")
+    // Custom query to find tables that don't have a reservation for the specified date and time
+    // Using UPPER() to make case-insensitive comparison
+    @Query("SELECT t FROM RestaurantTable t WHERE t.id NOT IN " +
+           "(SELECT CAST(r.tableId AS long) FROM Reservation r " +
+           "WHERE r.reservationDate = :date AND r.reservationTime = :time " +
+           "AND (UPPER(r.status) = 'UPCOMING' OR r.status = grp_9.restaurant2.entity.ReservationStatus.UPCOMING))")
     List<RestaurantTable> findAvailableTables(@Param("date") LocalDate date, @Param("time") LocalTime time);
 } 

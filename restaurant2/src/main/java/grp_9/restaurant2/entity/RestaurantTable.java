@@ -27,13 +27,23 @@ public class RestaurantTable {
     @Enumerated(EnumType.STRING)
     private TableStatus status = TableStatus.AVAILABLE;
     
-    // Helper method to check if table is available
-    public boolean isReserved() {
+    // Transient field to indicate temporary reservation status
+    // This doesn't affect the database, only used for API responses
+    @Transient
+    private boolean reserved = false;
+    
+    // Helper method to check if table is permanently unavailable
+    public boolean isPermanentlyUnavailable() {
         return status != TableStatus.AVAILABLE;
     }
     
-    // Helper method to set table as reserved
-    public void setReserved(boolean reserved) {
-        this.status = reserved ? TableStatus.RESERVED : TableStatus.AVAILABLE;
+    // Helper method to set table as permanently unavailable
+    public void setPermanentlyUnavailable(boolean unavailable) {
+        this.status = unavailable ? TableStatus.OCCUPIED : TableStatus.AVAILABLE;
+    }
+    
+    // Check if table is available for a specific time slot
+    public boolean isAvailableForTimeSlot() {
+        return !reserved && status == TableStatus.AVAILABLE;
     }
 } 

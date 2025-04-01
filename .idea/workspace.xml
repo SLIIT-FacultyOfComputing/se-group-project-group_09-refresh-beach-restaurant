@@ -5,152 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/data-uri-to-buffer/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/data-uri-to-buffer/dist/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/data-uri-to-buffer/dist/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/data-uri-to-buffer/dist/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/data-uri-to-buffer/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/data-uri-to-buffer/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/file.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/file.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/from.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/from.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/fetch-blob/streams.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/formdata-polyfill/FormData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/formdata-polyfill/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/formdata-polyfill/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/formdata-polyfill/esm.min.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/formdata-polyfill/esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/formdata-polyfill/formdata-to-blob.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/formdata-polyfill/formdata.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/formdata-polyfill/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/README_20210527203617.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/README_20210527212714.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/README_20210527213345.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/README_20210527213411.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/README_20210527213803.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/README_20210527214323.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/README_20210527214408.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527203842.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527203947.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527204259.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527204418.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527204756.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527204833.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527211208.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527211248.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527212722.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527212731.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527212746.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527212900.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527213022.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527213822.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527213843.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527213852.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527213910.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527214034.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527214643.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527214654.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/index_20210527214700.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/package_20210527203733.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/package_20210527203825.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/package_20210527204621.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/package_20210527204913.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/package_20210527204925.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/package_20210527205145.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/package_20210527205156.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/test_20210527205603.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/test_20210527205957.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/.history/test_20210527210021.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-domexception/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/@types/index.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/body.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/errors/abort-error.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/errors/base.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/errors/fetch-error.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/headers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/request.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/response.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/utils/get-search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/utils/is-redirect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/utils/is.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/utils/multipart-parser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/node-fetch/src/utils/referrer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es2018.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es2018.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es2018.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es2018.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es2018.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es2018.mjs.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es6.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es6.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es6.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es6.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.es6.mjs.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/polyfill.mjs.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.es2018.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.es2018.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.es2018.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.es2018.mjs.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.es6.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.es6.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.es6.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.es6.mjs.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.mjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/ponyfill.mjs.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/types/polyfill.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/types/ponyfill.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/types/ts3.6/polyfill.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/types/ts3.6/ponyfill.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/dist/types/tsdoc-metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/es2018/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/es6/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/ponyfill/es2018/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/ponyfill/es6/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/web-streams-polyfill/ponyfill/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/TableController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/ReservationStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/TableStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/restaurant_api_postman_collection.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test-api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/config/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/TableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/TableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,45 +68,45 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BackendApplication.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.BackendApplication (1).executor": "Run",
-    "Spring Boot.BackendApplication (2).executor": "Run",
-    "Spring Boot.BackendApplication (3).executor": "Run",
-    "Spring Boot.BackendApplication (4).executor": "Run",
-    "Spring Boot.BackendApplication.executor": "Run",
-    "Spring Boot.Restaurant2Application.executor": "Run",
-    "Spring Boot.backend.executor": "Run",
-    "git-widget-placeholder": "feature/reservations-v2",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Documents/Y2S2/SE/Project/v1",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BackendApplication (2).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BackendApplication (3).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BackendApplication (4).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.Restaurant2Application.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.backend.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/reservations-v2&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/Y2S2/SE/Project/v1&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.refreshbeach.backend" />
@@ -439,6 +302,11 @@
       <workItem from="1743342259087" duration="4153000" />
       <workItem from="1743346772087" duration="51000" />
       <workItem from="1743346945486" duration="9839000" />
+      <workItem from="1743359588037" duration="1270000" />
+      <workItem from="1743401458534" duration="293000" />
+      <workItem from="1743415593340" duration="2110000" />
+      <workItem from="1743429581804" duration="1471000" />
+      <workItem from="1743494421084" duration="8548000" />
     </task>
     <servers />
   </component>

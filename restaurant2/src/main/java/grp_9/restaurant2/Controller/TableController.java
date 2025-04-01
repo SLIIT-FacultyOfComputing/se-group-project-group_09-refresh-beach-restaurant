@@ -15,6 +15,8 @@ import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/api/tables")
@@ -78,11 +80,35 @@ public class TableController {
         
         try {
             LocalTime localTime = LocalTime.parse(time);
+            logger.info("Parsed time: " + localTime);
+            
+            // Get all tables to include both available and unavailable ones
+            List<RestaurantTable> allTables = tableRepository.findAll();
+            logger.info("Total tables in database: " + allTables.size());
+            
+            // Get tables that are available for this date and time
             List<RestaurantTable> availableTables = tableRepository.findAvailableTables(date, localTime);
-            logger.info("Found " + availableTables.size() + " available tables");
-            return availableTables;
+            logger.info("Tables available after reservation check: " + availableTables.size());
+            
+            // Create a set of IDs for quick lookup
+            Set<Long> availableTableIds = availableTables.stream()
+                .map(RestaurantTable::getId)
+                .collect(Collectors.toSet());
+            
+            // Mark tables as reserved or available based on reservations
+            for (RestaurantTable table : allTables) {
+                if (!availableTableIds.contains(table.getId())) {
+                    // If the table is not in the available tables list, mark it as reserved
+                    table.setReserved(true);
+                }
+            }
+            
+            logger.info("Returning all tables with reservation status marked");
+            return allTables;
+            
         } catch (Exception e) {
             logger.warning("Error finding available tables: " + e.getMessage());
+            e.printStackTrace();
             // Fallback to returning all tables if there's an error
             List<RestaurantTable> allTables = tableRepository.findAll();
             logger.info("Returning " + allTables.size() + " tables as fallback");

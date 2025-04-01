@@ -66,6 +66,15 @@ public class ReservationService {
         RestaurantTable table = tableOpt.get();
         System.out.println("DEBUG: Found table: " + table);
         
+        // Check if table is already reserved for this date and time using case-insensitive query
+        List<Reservation> existingReservations = reservationRepository.findUpcomingReservations(
+            tableId.intValue(), date, time);
+        
+        if (!existingReservations.isEmpty()) {
+            System.out.println("DEBUG: Table " + tableId + " is already reserved for " + date + " at " + time);
+            throw new RuntimeException("This table is already reserved for the selected date and time");
+        }
+        
         // Verify capacity
         if (peopleCount > table.getCapacity()) {
             System.out.println("DEBUG: Capacity check failed - table capacity: " + table.getCapacity() + 
@@ -89,11 +98,8 @@ public class ReservationService {
         Reservation savedReservation = reservationRepository.save(reservation);
         System.out.println("DEBUG: SAVED RESERVATION TO DATABASE: " + savedReservation);
         
-        // Update table status
-        table.setStatus(TableStatus.RESERVED);
-        System.out.println("DEBUG: Updating table " + table.getId() + " to status: " + table.getStatus());
-        tableRepository.save(table);
-        System.out.println("DEBUG: Table updated successfully, status: " + table.getStatus());
+        // We no longer update the table status to keep tables available for other time slots
+        // This allows the same table to be reserved at different times/dates
         
         return savedReservation;
     }
@@ -111,13 +117,7 @@ public class ReservationService {
         reservation.setStatus(ReservationStatus.CANCELED);
         reservationRepository.save(reservation);
         
-        // Free up the table
-        Optional<RestaurantTable> tableOpt = tableRepository.findById(Long.valueOf(reservation.getTableId()));
-        if (tableOpt.isPresent()) {
-            RestaurantTable table = tableOpt.get();
-            table.setStatus(TableStatus.AVAILABLE);
-            tableRepository.save(table);
-        }
+        // No need to change table status since we don't change it when creating reservations
         
         return true;
     }

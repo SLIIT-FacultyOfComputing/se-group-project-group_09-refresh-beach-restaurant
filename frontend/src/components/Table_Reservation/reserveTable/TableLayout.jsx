@@ -7,17 +7,54 @@ const TableLayout = ({ selectedDate, selectedTime }) => {
     const [error, setError] = useState(null);
     const [selectedTable, setSelectedTable] = useState(null);
 
+    // Helper function to convert time to 24-hour format for API calls
+    const convertTo24HourFormat = (timeString) => {
+        if (!timeString) return null;
+        
+        // Check if the time is already in 24-hour format
+        if (!timeString.includes(' ')) {
+            // If it doesn't contain AM/PM, assume it's already in 24-hour format
+            return timeString.includes(':') && timeString.split(':').length === 2 
+                ? `${timeString}:00` 
+                : timeString;
+        }
+        
+        // Parse the time components
+        const [time, modifier] = timeString.split(' ');
+        let [hours, minutes] = time.split(':');
+        
+        // Convert hours to 24-hour format
+        if (hours === '12') {
+            hours = modifier === 'AM' ? '00' : '12';
+        } else if (modifier === 'PM') {
+            hours = String(parseInt(hours, 10) + 12);
+        }
+        
+        // Ensure two digits
+        hours = String(hours).padStart(2, '0');
+        minutes = String(minutes).padStart(2, '0');
+        
+        // Return formatted time
+        return `${hours}:${minutes}:00`;
+    };
+
     // Fetch tables from the backend
     useEffect(() => {
         const fetchTables = async () => {
             try {
                 setLoading(true);
+                
+                // Convert time to 24-hour format for API
+                const formattedTime = selectedTime ? convertTo24HourFormat(selectedTime) : null;
+                
                 // If date and time are selected, get available tables for that time
-                const url = selectedDate && selectedTime 
-                    ? `http://localhost:8085/api/tables/available?date=${selectedDate.toISOString().split('T')[0]}&time=${encodeURIComponent(selectedTime)}`
+                const url = selectedDate && formattedTime 
+                    ? `http://localhost:8085/api/tables/available?date=${selectedDate.toISOString().split('T')[0]}&time=${encodeURIComponent(formattedTime)}`
                     : 'http://localhost:8085/api/tables';
                 
                 console.log("Fetching tables from:", url);
+                console.log("Time used for query:", selectedTime, "→", formattedTime);
+                
                 const response = await fetch(url);
                 
                 if (!response.ok) {
@@ -26,6 +63,14 @@ const TableLayout = ({ selectedDate, selectedTime }) => {
                 
                 const data = await response.json();
                 console.log("Tables received:", data);
+                
+                // Log which tables are marked as reserved
+                data.forEach(table => {
+                    if (table.reserved || table.status === 'RESERVED') {
+                        console.log(`Table ${table.tableNumber} (ID: ${table.id}) is marked as reserved`);
+                    }
+                });
+                
                 setTables(data);
                 setError(null);
             } catch (error) {

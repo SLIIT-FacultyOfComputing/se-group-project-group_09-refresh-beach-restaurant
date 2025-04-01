@@ -8,6 +8,14 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
     const convertTo24HourFormat = (timeString) => {
         if (!timeString) return null;
         
+        // Check if the time is already in 24-hour format
+        if (!timeString.includes(' ')) {
+            // If it doesn't contain AM/PM, assume it's already in 24-hour format
+            return timeString.includes(':') && timeString.split(':').length === 2 
+                ? `${timeString}:00` 
+                : timeString;
+        }
+        
         // Parse the time components
         const [time, modifier] = timeString.split(' ');
         let [hours, minutes] = time.split(':');
@@ -21,6 +29,7 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
         
         // Ensure two digits
         hours = String(hours).padStart(2, '0');
+        minutes = String(minutes).padStart(2, '0');
         
         // Return formatted time
         return `${hours}:${minutes}:00`;
@@ -56,7 +65,7 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
         setReservationStatus("Reserving your table...");
 
         try {
-            // Set to false to use the test mode
+            // Set to false use the test mode
             const useTestMode = false; 
 
             if (useTestMode) {
