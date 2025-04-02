@@ -91,48 +91,64 @@ const TableLayout = ({ selectedDate, selectedTime }) => {
         console.log("Selected table ID:", tableId);
     };
 
+    // Split tables into indoor and outdoor sections
+    const indoorTables = tables.filter(table => table.tableNumber <= 20);
+    const outdoorTables = tables.filter(table => table.tableNumber > 20);
+
+    const renderTableButton = (table) => (
+        <button
+            key={table.id}
+            className={`w-10 h-10 border rounded-lg text-white font-bold text-sm
+                ${table.reserved || table.status === 'RESERVED'
+                    ? "bg-gray-700  bg-opacity-25 cursor-not-allowed"
+                    : selectedTable === table.id
+                        ? "bg-blue-600"
+                        : "bg-blue-900 hover:bg-blue-600"}`}
+            disabled={table.reserved || table.status === 'RESERVED'}
+            onClick={() => handleTableClick(table.id)}
+        >
+            {table.tableNumber}
+        </button>
+    );
+
     return (
-        <div className="w-full max-w-2xl">
-            {/* Header */}
-            <h2 className="text-xl font-bold mb-4 text-center text-white">
-                Select a Table for {selectedDate ? selectedDate.toLocaleDateString() : ''} at {selectedTime}
-            </h2>
+        <div className="w-full max-w-3xl">
+
 
             {/* Table Layout */}
-            <div className="bg-white rounded-lg shadow-lg p-4">
+            <div className=" rounded-lg shadow-lg p-3 bg-transparent">
                 {loading ? (
                     <p className="text-center">Loading tables...</p>
                 ) : error ? (
                     <p className="text-red-500 text-center">{error}</p>
                 ) : (
-                    <div>
-                        <div className="grid grid-cols-6 gap-2">
-                            {tables.map((table) => (
-                                <button
-                                    key={table.id}
-                                    className={`w-12 h-12 border rounded-lg text-white font-bold text-sm
-    ${table.reserved || table.status === 'RESERVED'
-                                        ? "bg-gray-400 cursor-not-allowed"
-                                        : selectedTable === table.id
-                                            ? "bg-green-800"
-                                            : "bg-green-600 hover:bg-green-700"}`}
-                                    disabled={table.reserved || table.status === 'RESERVED'}
-                                    onClick={() => handleTableClick(table.id)}
-                                >
-                                    {table.tableNumber}
-                                </button>
-                            ))}
+                    <div className="flex flex-col space-y-3">
+                        {/* Indoor Section */}
+                        <div className="p-2 border border-transparent rounded-lg bg-transparent">
+                            <h3 className="text-lg font-bold mb-4 text-yellow-800 text-center">Indoor Tables</h3>
+                            <div className="grid grid-cols-5 gap-1 px-0 justify-items-center">
+                                {indoorTables.map(renderTableButton)}
+                            </div>
+                        </div>
+                        
+                        {/* Outdoor Section */}
+                        <div className="p-2 border border-transparent rounded-lg bg-transparent">
+                            <h3 className="text-lg font-bold mb-4 text-yellow-800 text-center">Outdoor Tables </h3>
+                            <div className="grid grid-cols-5 gap-1 px-0 justify-items-center">
+                                {outdoorTables.map(renderTableButton)}
+                            </div>
                         </div>
 
                         {/* Show table details when selected */}
                         {selectedTable && tables.length > 0 && (
-                            <div className="mt-4 text-center">
+                            <div className="mt-2 text-center p-2 border-transparent rounded-lg bg-transparent">
                                 {(() => {
                                     const table = tables.find(t => t.id === selectedTable);
                                     return table ? (
                                         <>
-                                            <p className="text-lg font-semibold">
-                                                Table {table.tableNumber} Selected
+
+                                            <p className="text-md text-yellow-600 mb-2">
+                                                Capacity per Table : {table.capacity} people
                                             </p>
                                             <ConfirmReservationButton 
                                                 tableId={table.id} 
