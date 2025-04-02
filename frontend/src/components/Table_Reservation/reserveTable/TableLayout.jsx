@@ -102,8 +102,8 @@ const TableLayout = ({ selectedDate, selectedTime }) => {
                 ${table.reserved || table.status === 'RESERVED'
                     ? "bg-gray-700  bg-opacity-25 cursor-not-allowed"
                     : selectedTable === table.id
-                        ? "bg-green-800"
-                        : "bg-green-600 hover:bg-green-700"}`}
+                        ? "bg-blue-600"
+                        : "bg-blue-900 hover:bg-blue-600"}`}
             disabled={table.reserved || table.status === 'RESERVED'}
             onClick={() => handleTableClick(table.id)}
         >
@@ -148,7 +148,7 @@ const TableLayout = ({ selectedDate, selectedTime }) => {
                                         <>
 
                                             <p className="text-md text-yellow-600 mb-2">
-                                                Capacity: {table.capacity} people
+                                                Capacity per Table : {table.capacity} people
                                             </p>
                                             <ConfirmReservationButton 
                                                 tableId={table.id} 

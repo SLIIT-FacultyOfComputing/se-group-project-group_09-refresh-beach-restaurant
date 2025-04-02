@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ReservationForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ReservationForm.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/SubmitButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/SubmitButton.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -320,13 +317,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Restaurant2Application" />
-      <item itemvalue="Spring Boot.backend" />
       <item itemvalue="Spring Boot.BackendApplication (1)" />
       <item itemvalue="Spring Boot.BackendApplication (2)" />
       <item itemvalue="Spring Boot.BackendApplication (3)" />
       <item itemvalue="Spring Boot.BackendApplication (4)" />
       <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="Spring Boot.Restaurant2Application" />
+      <item itemvalue="Spring Boot.backend" />
     </list>
     <recent_temporary>
       <list>
@@ -398,7 +395,8 @@
       <workItem from="1743401458534" duration="293000" />
       <workItem from="1743415593340" duration="2110000" />
       <workItem from="1743429581804" duration="1471000" />
-      <workItem from="1743494421084" duration="12796000" />
+      <workItem from="1743494421084" duration="14220000" />
+      <workItem from="1743528057550" duration="1243000" />
     </task>
     <servers />
   </component>
