@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+feature/user-management-fe
       <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/logo.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/restaurant-bg.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/index.html" beforeDir="false" />
@@ -25,6 +26,9 @@
       <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UpdateProfile.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UserDashboard.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/signup.js" beforeDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
+ main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +76,102 @@
         <option name="jdkForImporter" value="21" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/core/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/eslint-parser/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-compilation-targets/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-create-class-features-plugin/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-create-regexp-features-plugin/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/plugin-transform-runtime/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/preset-env/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@eslint/eslintrc/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@isaacs/cliui/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@istanbuljs/load-nyc-config/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@jest/reporters/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@jest/transform/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@rollup/pluginutils/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@svgr/hast-util-to-babel-ast/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@testing-library/jest-dom/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/accepts/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/acorn-globals/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/ajv-formats/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/babel-loader/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/babel-plugin-polyfill-corejs2/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/body-parser/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/chokidar/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/clean-css/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/coa/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/compression/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/css-minimizer-webpack-plugin/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/css-select/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/csso/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/cssstyle/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/default-gateway/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/detect-port-alt/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/domexception/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/escodegen/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-import-resolver-node/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-module-utils/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-import/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-jsx-a11y/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-react/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-webpack-plugin/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/express/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/fast-glob/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/file-loader/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/finalhandler/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/fork-ts-checker-webpack-plugin/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/global-prefix/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/hpack.js/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/import-fresh/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-instrument/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-report/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-source-maps/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-runtime/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-watch-typeahead/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-worker/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jsonpath/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/make-dir/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/npm-run-path/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/path-scurry/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/pkg-up/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-modules-local-by-default/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-modules-scope/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-svgo/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/pretty-format/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/prop-types/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/proxy-addr/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/raw-body/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/react-dev-utils/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/regjsparser/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/renderkid/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/rollup-plugin-terser/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/schema-utils/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/send/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/serve-index/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/source-map-support/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/stack-utils/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/static-eval/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/string-width-cjs/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/string-width/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/sucrase/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/svgo/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tailwindcss/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tempy/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/terser/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tough-cookie/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tsconfig-paths/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tsutils/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/v8-to-istanbul/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack-dev-server/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack-manifest-plugin/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/whatwg-encoding/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/workbox-build/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/workbox-webpack-plugin/package.json" />
+    <dismissed value="$PROJECT_DIR$/frontend/node_modules/write-file-atomic/package.json" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -247,13 +347,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Restaurant2Application" />
-      <item itemvalue="Spring Boot.backend" />
       <item itemvalue="Spring Boot.BackendApplication (1)" />
       <item itemvalue="Spring Boot.BackendApplication (2)" />
       <item itemvalue="Spring Boot.BackendApplication (3)" />
       <item itemvalue="Spring Boot.BackendApplication (4)" />
       <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="Spring Boot.Restaurant2Application" />
+      <item itemvalue="Spring Boot.backend" />
     </list>
     <recent_temporary>
       <list>
@@ -325,7 +425,8 @@
       <workItem from="1743401458534" duration="293000" />
       <workItem from="1743415593340" duration="2110000" />
       <workItem from="1743429581804" duration="1471000" />
-      <workItem from="1743494421084" duration="8548000" />
+      <workItem from="1743494421084" duration="14220000" />
+      <workItem from="1743528057550" duration="1243000" />
     </task>
     <servers />
   </component>

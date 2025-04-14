@@ -9,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/menu")
-@CrossOrigin(origins = "http://localhost:5173") // Allow frontend to access API
+@CrossOrigin(origins = "http://localhost:5174") // Allow frontend to access API
 public class MenuItemController {
     @Autowired
     private MenuItemService menuItemService;

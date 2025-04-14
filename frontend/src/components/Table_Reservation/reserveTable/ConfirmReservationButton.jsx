@@ -119,7 +119,7 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
     return (
         <div className="text-center">
             <button
-                className={`mt-4 px-6 py-3 ${isReserving ? 'bg-gray-500' : 'bg-yellow-500 hover:bg-yellow-600'} text-white font-bold rounded-lg`}
+                className={`mt-4 px-6 py-3 ${isReserving ? 'bg-gray-500' : 'bg-yellow-500 hover:bg-yellow-600'} text-black font-bold rounded-lg`}
                 onClick={handleConfirm}
                 disabled={isReserving}
             >
@@ -127,7 +127,7 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
             </button>
             
             {reservationStatus && (
-                <p className={`mt-2 ${reservationStatus.includes('Failed') ? 'text-red-500' : 'text-green-500'}`}>
+                <p className={`mt-4 ${reservationStatus.includes('Failed') ? 'text-red-500' : 'text-green-500'}`}>
                     {reservationStatus}
                 </p>
             )}
