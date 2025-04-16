@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,13 +316,13 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Spring Boot.Restaurant2Application" />
+      <item itemvalue="Spring Boot.backend" />
       <item itemvalue="Spring Boot.BackendApplication (1)" />
       <item itemvalue="Spring Boot.BackendApplication (2)" />
       <item itemvalue="Spring Boot.BackendApplication (3)" />
       <item itemvalue="Spring Boot.BackendApplication (4)" />
       <item itemvalue="Spring Boot.BackendApplication" />
-      <item itemvalue="Spring Boot.Restaurant2Application" />
-      <item itemvalue="Spring Boot.backend" />
     </list>
     <recent_temporary>
       <list>
@@ -397,6 +396,12 @@
       <workItem from="1743429581804" duration="1471000" />
       <workItem from="1743494421084" duration="14220000" />
       <workItem from="1743528057550" duration="1243000" />
+      <workItem from="1743583997601" duration="2692000" />
+      <workItem from="1743593760727" duration="930000" />
+      <workItem from="1743801534805" duration="600000" />
+      <workItem from="1743850259829" duration="601000" />
+      <workItem from="1744219633857" duration="594000" />
+      <workItem from="1744807887969" duration="1196000" />
     </task>
     <servers />
   </component>
