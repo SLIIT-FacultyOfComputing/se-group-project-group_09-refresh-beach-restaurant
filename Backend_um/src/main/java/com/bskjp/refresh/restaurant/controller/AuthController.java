@@ -2,30 +2,35 @@ package com.bskjp.refresh.restaurant.controller;
 
 import com.bskjp.refresh.restaurant.dto.AuthRequest;
 import com.bskjp.refresh.restaurant.dto.AuthResponse;
+import com.bskjp.refresh.restaurant.dto.UserDTO;
 import com.bskjp.refresh.restaurant.service.AuthService;
-import lombok.RequiredArgsConstructor;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
-@RequiredArgsConstructor
 public class AuthController {
 
     private final AuthService authService;
 
-    @PostMapping("/signup")
-    public AuthResponse signup(@RequestBody AuthRequest authRequest) {
-        return authService.signup(authRequest);
+    public AuthController(AuthService authService) {
+        this.authService = authService;
     }
 
     @PostMapping("/login")
-    public AuthResponse login(@RequestBody AuthRequest authRequest) {
-        return authService.login(authRequest);
+    public ResponseEntity<AuthResponse> login(@Valid @RequestBody AuthRequest authRequest) throws Throwable {
+        return ResponseEntity.ok(authService.login(authRequest));
     }
 
-    /* Forgot Password Endpoint */
-    @PostMapping("/forgot-password")
-    public String forgotPassword(@RequestBody String email) {
-        return authService.forgotPassword(email);
+    @PostMapping("/register")
+    public ResponseEntity<AuthResponse> register(@Valid @RequestBody UserDTO userDTO) {
+        return new ResponseEntity<>(authService.register(userDTO), HttpStatus.CREATED);
+    }
+
+    @PostMapping("/refresh-token")
+    public ResponseEntity<AuthResponse> refreshToken(@RequestBody String refreshToken) throws Throwable {
+        return ResponseEntity.ok(authService.refreshToken(refreshToken));
     }
 }

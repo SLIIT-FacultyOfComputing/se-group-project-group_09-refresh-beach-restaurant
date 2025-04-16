@@ -1,118 +1,60 @@
 package com.bskjp.refresh.restaurant.model;
-
 import jakarta.persistence.*;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
-
-import java.util.Collection;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
-public class User implements UserDetails {
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
-    private String password;
+    @Column(nullable = false)
+    private String firstName;
+
+    @Column(nullable = false)
+    private String lastName;
+
+    @Column(nullable = false, unique = true)
     private String email;
-    private String phone;
-    private String address;
+
+    @Column(nullable = false)
+    private String password;
+
+    private String phoneNumber;
 
     @Enumerated(EnumType.STRING)
-    private USER_ROLE role;
+    private UserRole role = UserRole.USER;
 
-    // Getters and Setters
-    public Long getId() {
-        return id;
+    private boolean enabled = false;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private List<Address> addresses = new ArrayList<>();
+
+    @CreationTimestamp
+    private LocalDateTime createdAt;
+
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
+
+    // Helper methods
+    public void addAddress(Address address) {
+        addresses.add(address);
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void removeAddress(Address address) {
+        addresses.remove(address);
     }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public USER_ROLE getRole() {
-        return role;
-    }
-
-    public void setRole(USER_ROLE role) {
-        this.role = role;
-    }
-
-    // Spring Security Methods
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return role != null ? List.of(() -> role.name()) : List.of();
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
-
-    public User orElseThrow(Object userNotFound) {
-        if (this == null) {
-            throw new RuntimeException(userNotFound.toString());
-        }
-        return this;
-    }
-
 }

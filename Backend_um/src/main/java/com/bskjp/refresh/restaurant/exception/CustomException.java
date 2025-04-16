@@ -1,22 +1,14 @@
 package com.bskjp.refresh.restaurant.exception;
 
+import lombok.Getter;
+import org.springframework.http.HttpStatus;
+
+@Getter
 public class CustomException extends RuntimeException {
+    private final HttpStatus status;
 
-    private String message;
-
-    // Constructor
-    public CustomException(String message) {
+    public CustomException(String message, HttpStatus status) {
         super(message);
-        this.message = message;
-    }
-
-    // Getter method
-    public String getMessage() {
-        return message;
-    }
-
-    // Setter method (if needed)
-    public void setMessage(String message) {
-        this.message = message;
+        this.status = status;
     }
 }

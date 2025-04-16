@@ -2,89 +2,137 @@ package com.bskjp.refresh.restaurant.service;
 
 import com.bskjp.refresh.restaurant.dto.AuthRequest;
 import com.bskjp.refresh.restaurant.dto.AuthResponse;
+import com.bskjp.refresh.restaurant.dto.UserDTO;
+import com.bskjp.refresh.restaurant.exception.CustomException;
+import com.bskjp.refresh.restaurant.model.Notification;
 import com.bskjp.refresh.restaurant.model.User;
+import com.bskjp.refresh.restaurant.model.UserRole;
 import com.bskjp.refresh.restaurant.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import com.bskjp.refresh.restaurant.security.JwtUtil;
+import org.springframework.http.HttpStatus;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-//import jakarta.mail.MessagingException;
-//import jakarta.mail.internet.MimeMessage;
-import java.lang.RuntimeException;
-
-
 
 @Service
 public class AuthService {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
+    private final AuthenticationManager authenticationManager;
+    private final JwtUtil jwtUtil;
+    private final com.bskjp.refresh.restaurant.service.NotificationService notificationService;
 
-    //@Autowired
-    //private JavaMailSender mailSender;  // For sending emails
+    public AuthService(UserRepository userRepository,
+                       PasswordEncoder passwordEncoder,
+                       AuthenticationManager authenticationManager,
+                       JwtUtil jwtUtil,
+                       com.bskjp.refresh.restaurant.service.NotificationService notificationService) {
+        this.userRepository = userRepository;
+        this.passwordEncoder = passwordEncoder;
+        this.authenticationManager = authenticationManager;
+        this.jwtUtil = jwtUtil;
+        this.notificationService = notificationService;
+    }
 
-    private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    public AuthResponse login(AuthRequest request) throws Throwable {
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword())
+        );
 
-    public AuthResponse signup(AuthRequest authRequest) {
-        if (userRepository.existsByUsername(authRequest.getUsername())) {
-            throw new RuntimeException("Username already taken");
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String token = jwtUtil.generateToken(userDetails);
+        String refreshToken = jwtUtil.generateRefreshToken(userDetails);
+
+        User user = (User) userRepository.findByEmail(userDetails.getUsername())
+                .orElseThrow(() -> new CustomException("User not found", HttpStatus.NOT_FOUND));
+
+        return AuthResponse.builder()
+                .token(token)
+                .refreshToken(refreshToken)
+                .email(user.getEmail())
+                .userId(user.getId())
+                .role(user.getRole())
+                .firstName(user.getFirstName())
+                .lastName(user.getLastName())
+                .build();
+    }
+
+    public AuthResponse register(UserDTO userDTO) {
+        if (userRepository.existsByEmail(userDTO.getEmail())) {
+            throw new CustomException("Email is already registered", HttpStatus.BAD_REQUEST);
         }
 
         User user = new User();
-        user.setUsername(authRequest.getUsername());
-        user.setPassword(passwordEncoder.encode(authRequest.getPassword()));
-        user.setEmail(authRequest.getEmail());
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
+        user.setEmail(userDTO.getEmail());
+        user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+        user.setPhoneNumber(userDTO.getPhoneNumber());
+        user.setRole(UserRole.USER);
+        user.setEnabled(true);
 
-        userRepository.save(user);
-        return new AuthResponse("Signup successful", "token_placeholder");
+        User savedUser = (User) userRepository.save(user);
+
+        // Create welcome notification
+        notificationService.createNotification(
+                savedUser,
+                "Welcome to our restaurant! Thank you for signing up.",
+                Notification.NotificationType.ACCOUNT_CREATION
+        );
+
+        UserDetails userDetails = org.springframework.security.core.userdetails.User
+                .withUsername(savedUser.getEmail())
+                .password(savedUser.getPassword())
+                .authorities("ROLE_" + savedUser.getRole().name())
+                .build();
+
+        String token = jwtUtil.generateToken(userDetails);
+        String refreshToken = jwtUtil.generateRefreshToken(userDetails);
+
+        return AuthResponse.builder()
+                .token(token)
+                .refreshToken(refreshToken)
+                .email(savedUser.getEmail())
+                .userId(savedUser.getId())
+                .role(savedUser.getRole())
+                .firstName(savedUser.getFirstName())
+                .lastName(savedUser.getLastName())
+                .build();
     }
 
-    public AuthResponse login(AuthRequest authRequest) {
-        User user = userRepository.findByUsername(authRequest.getUsername())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+    public AuthResponse refreshToken(String refreshToken) throws Throwable {
+        String username = jwtUtil.extractUsername(refreshToken);
+        User user = (User) (User) userRepository.findByEmail(username)
+                .orElseThrow(() -> new CustomException("User not found", HttpStatus.NOT_FOUND));
 
-        if (!passwordEncoder.matches(authRequest.getPassword(), user.getPassword())) {
-            throw new RuntimeException("Invalid credentials");
+        UserDetails userDetails = org.springframework.security.core.userdetails.User
+                .withUsername(user.getEmail())
+                .password(user.getPassword())
+                .authorities("ROLE_" + user.getRole().name())
+                .build();
+
+        if (jwtUtil.validateToken(refreshToken, userDetails)) {
+            String newToken = jwtUtil.generateToken(userDetails);
+            String newRefreshToken = jwtUtil.generateRefreshToken(userDetails);
+
+            return AuthResponse.builder()
+                    .token(newToken)
+                    .refreshToken(newRefreshToken)
+                    .email(user.getEmail())
+                    .userId(user.getId())
+                    .role(user.getRole())
+                    .firstName(user.getFirstName())
+                    .lastName(user.getLastName())
+                    .build();
         }
 
-        String token = "generated_jwt_token"; // Token generation logic should be added
-        return new AuthResponse("Login successful", token);
+        throw new CustomException("Invalid refresh token", HttpStatus.UNAUTHORIZED);
     }
-
-    /* Forgot Password Logic
-    public String forgotPassword(String email) {
-        // Find user by email, or throw exception if not found
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> new RuntimeException("User not found"));
-
-        // Generate reset token and URL (you would replace with actual logic)
-        String resetToken = generateResetToken();
-        String resetUrl = "http://yourfrontend.com/reset-password?token=" + resetToken;
-
-        try {
-            sendResetEmail(user.getEmail(), resetUrl);
-            return "Password reset instructions have been sent to your email.";
-        } catch (MessagingException e) {
-            e.printStackTrace();
-            return "Error occurred while sending reset email.";
-        }
-    }
-
-    private String generateResetToken() {
-    }
-
-
-     Sends a reset password email
-    private void sendResetEmail(String email, String resetUrl) throws MessagingException {
-        MimeMessage message = mailSender.createMimeMessage();
-        MimeMessageHelper helper = new MimeMessageHelper(message, true);
-
-        helper.setTo(email);
-        helper.setSubject("Password Reset Request");
-        helper.setText("Click the following link to reset your password: " + resetUrl);
-
-        mailSender.send(message);
-    }*/
 }
