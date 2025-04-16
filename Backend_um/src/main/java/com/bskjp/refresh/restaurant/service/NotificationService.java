@@ -16,6 +16,7 @@ public class NotificationService {
         this.notificationRepository = notificationRepository;
     }
 
+
     public Notification createNotification(User user, String message, Notification.NotificationType type) {
         Notification notification = new Notification();
         notification.setUser(user);

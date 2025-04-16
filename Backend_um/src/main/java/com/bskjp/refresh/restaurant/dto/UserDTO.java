@@ -18,6 +18,7 @@ import java.util.List;
 public class UserDTO {
     private Long id;
 
+
     @NotBlank(message = "First name is required")
     private String firstName;
 

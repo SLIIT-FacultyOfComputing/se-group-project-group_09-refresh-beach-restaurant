@@ -48,4 +48,5 @@ public class PasswordController {
         response.put("message", "Password changed successfully");
         return ResponseEntity.ok(response);
     }
+
 }

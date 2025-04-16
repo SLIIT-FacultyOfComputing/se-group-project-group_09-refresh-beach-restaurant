@@ -23,6 +23,7 @@ public class JwtUtil {
     @Value("${jwt.expiration:86400000}") // 24 hours in milliseconds
     private long jwtExpiration;
 
+
     @Value("${jwt.refresh-expiration:604800000}") // 7 days in milliseconds
     private long refreshExpiration;
 
