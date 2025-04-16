@@ -4,11 +4,20 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+feature/user-management
         <option value="$PROJECT_DIR$/refresh-restaurant/pom.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_22" project-jdk-name="21" project-jdk-type="JavaSDK">
+=======
+        <option value="$PROJECT_DIR$/backend/pom.xml" />
+        <option value="$PROJECT_DIR$/restaurant2/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-23" project-jdk-type="JavaSDK">
+ main
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
