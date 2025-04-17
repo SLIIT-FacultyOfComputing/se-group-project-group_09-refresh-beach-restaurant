@@ -15,11 +15,10 @@ const TableLayout = ({ selectedDate, selectedTime }) => {
         if (!timeString.includes(' ')) {
             // If it doesn't contain AM/PM, assume it's already in 24-hour format
             return timeString.includes(':') && timeString.split(':').length === 2 
-                ? `${timeString}:00` 
+                ? `${timeString}:00`
                 : timeString;
         }
-        
-        // Parse the time components
+            // Parse the time components
         const [time, modifier] = timeString.split(' ');
         let [hours, minutes] = time.split(':');
         
@@ -169,6 +168,4 @@ const TableLayout = ({ selectedDate, selectedTime }) => {
 };
 
 export default TableLayout;
-
-
 
