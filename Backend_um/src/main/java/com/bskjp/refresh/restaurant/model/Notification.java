@@ -1,6 +1,5 @@
 package com.bskjp.refresh.restaurant.model;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -24,11 +23,14 @@ public class Notification {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
+    @Column(nullable = false, length = 255)
     private String message;
 
-    private boolean read = false;
+    @Column(name = "is_read", nullable = false)
+    private boolean isRead = false;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private NotificationType type;
 
     @CreationTimestamp

@@ -10,7 +10,6 @@ public class EmailService {
 
     private final JavaMailSender mailSender;
 
-
     @Value("${spring.mail.username:restaurant@example.com}")
     private String fromEmail;
 

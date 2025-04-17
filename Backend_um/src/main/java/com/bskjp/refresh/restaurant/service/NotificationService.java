@@ -16,7 +16,6 @@ public class NotificationService {
         this.notificationRepository = notificationRepository;
     }
 
-
     public Notification createNotification(User user, String message, Notification.NotificationType type) {
         Notification notification = new Notification();
         notification.setUser(user);
@@ -30,11 +29,11 @@ public class NotificationService {
     }
 
     public List<Notification> getUnreadNotificationsByUser(User user) {
-        return notificationRepository.findByUserAndReadFalseOrderByCreatedAtDesc(user);
+        return notificationRepository.findByUserAndIsReadFalseOrderByCreatedAtDesc(user);
     }
 
     public long getUnreadNotificationCount(User user) {
-        return notificationRepository.countByUserAndReadFalse(user);
+        return notificationRepository.countByUserAndIsReadFalse(user);
     }
 
     public void markAsRead(Long notificationId) {
@@ -45,7 +44,7 @@ public class NotificationService {
     }
 
     public void markAllAsRead(User user) {
-        List<Notification> unreadNotifications = notificationRepository.findByUserAndReadFalseOrderByCreatedAtDesc(user);
+        List<Notification> unreadNotifications = notificationRepository.findByUserAndIsReadFalseOrderByCreatedAtDesc(user);
         unreadNotifications.forEach(notification -> notification.setRead(true));
         notificationRepository.saveAll(unreadNotifications);
     }

@@ -9,9 +9,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin(origins = "*")  // Allow all origins for testing, you can restrict to your frontend later.
 public class AuthController {
 
     private final AuthService authService;
@@ -34,5 +34,4 @@ public class AuthController {
     public ResponseEntity<AuthResponse> refreshToken(@RequestBody String refreshToken) throws Throwable {
         return ResponseEntity.ok(authService.refreshToken(refreshToken));
     }
-
 }

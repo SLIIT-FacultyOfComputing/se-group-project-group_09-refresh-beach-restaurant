@@ -22,7 +22,6 @@ public class JwtTokenProvider {
     private final CustomUserDetailsService userDetailsService;
     private final JwtUtil jwtUtil;
 
-
     @Value("${jwt.secret:defaultSecretKeyThatShouldBeReplacedInProduction12345678901234567890}")
     private String secret;
 
