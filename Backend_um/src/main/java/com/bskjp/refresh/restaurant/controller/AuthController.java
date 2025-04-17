@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin(origins = "*")  // Allow all origins for testing, you can restrict to your frontend later.
 public class AuthController {
 
     private final AuthService authService;
