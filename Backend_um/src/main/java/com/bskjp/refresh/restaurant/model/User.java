@@ -57,4 +57,9 @@ public class User {
     public void removeAddress(Address address) {
         addresses.remove(address);
     }
+
+    public List<Order> getOrders() {
+        return List.of();
+    }
+
 }

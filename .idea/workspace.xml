@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/logo.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/restaurant-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/AdminDashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/ForgotPassword.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/Home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/Login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/LogoutButton.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UpdateProfile.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UpdateProfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UserDashboard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/signup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,6 +84,7 @@
     "Spring Boot.BackendApplication.executor": "Run",
     "Spring Boot.Restaurant2Application.executor": "Run",
     "Spring Boot.backend.executor": "Run",
+    "git-widget-placeholder": "feature/user-management",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/2_Y2/newclone",
@@ -247,13 +226,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Restaurant2Application" />
-      <item itemvalue="Spring Boot.backend" />
       <item itemvalue="Spring Boot.BackendApplication (1)" />
       <item itemvalue="Spring Boot.BackendApplication (2)" />
       <item itemvalue="Spring Boot.BackendApplication (3)" />
       <item itemvalue="Spring Boot.BackendApplication (4)" />
       <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="Spring Boot.Restaurant2Application" />
+      <item itemvalue="Spring Boot.backend" />
     </list>
     <recent_temporary>
       <list>
@@ -268,8 +247,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
       </set>
     </attachedChunks>
   </component>
@@ -327,6 +306,7 @@
       <workItem from="1743429581804" duration="1471000" />
       <workItem from="1743494421084" duration="14220000" />
       <workItem from="1743528057550" duration="1243000" />
+      <workItem from="1744954049755" duration="18000" />
     </task>
     <servers />
   </component>
