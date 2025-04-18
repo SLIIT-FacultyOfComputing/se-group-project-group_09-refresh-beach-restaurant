@@ -7,7 +7,12 @@ import grp_9.restaurant2.entity.TableStatus;
 import grp_9.restaurant2.repository.ReservationRepository;
 import grp_9.restaurant2.repository.TableRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.OptimisticLockingFailureException;
+import org.springframework.orm.ObjectOptimisticLockingFailureException;
+import org.springframework.retry.annotation.Backoff;
+import org.springframework.retry.annotation.Retryable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
@@ -49,15 +54,20 @@ public class ReservationService {
         return reservationRepository.findByCustomerId(customerId);
     }
     
-    @Transactional
+    @Retryable(
+        value = {OptimisticLockingFailureException.class, ObjectOptimisticLockingFailureException.class},
+        maxAttempts = 3,
+        backoff = @Backoff(delay = 500)
+    )
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public Reservation createReservation(Long customerId, Long tableId, LocalDate date, 
                                         LocalTime time, int peopleCount, String contactNumber) {
         System.out.println("DEBUG: Creating reservation with customerId=" + customerId + 
                           ", tableId=" + tableId + ", date=" + date + ", time=" + time + 
                           ", peopleCount=" + peopleCount + ", contactNumber=" + contactNumber);
                           
-        // Check if table exists
-        Optional<RestaurantTable> tableOpt = tableRepository.findById(tableId);
+        // Use pessimistic locking to prevent concurrent modifications of the same table
+        Optional<RestaurantTable> tableOpt = tableRepository.findByIdWithLock(tableId);
         if (tableOpt.isEmpty()) {
             System.out.println("DEBUG: Table not found with ID: " + tableId);
             throw new RuntimeException("Table not found with ID: " + tableId);
@@ -104,7 +114,12 @@ public class ReservationService {
         return savedReservation;
     }
     
-    @Transactional
+    @Retryable(
+        value = {OptimisticLockingFailureException.class, ObjectOptimisticLockingFailureException.class},
+        maxAttempts = 3,
+        backoff = @Backoff(delay = 500)
+    )
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public boolean cancelReservation(Long reservationId) {
         Optional<Reservation> reservationOpt = reservationRepository.findById(reservationId);
         if (reservationOpt.isEmpty()) {

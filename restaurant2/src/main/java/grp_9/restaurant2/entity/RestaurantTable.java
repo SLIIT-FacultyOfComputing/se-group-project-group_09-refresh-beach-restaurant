@@ -27,6 +27,10 @@ public class RestaurantTable {
     @Enumerated(EnumType.STRING)
     private TableStatus status = TableStatus.AVAILABLE;
     
+    // Add version field for optimistic locking
+    @Version
+    private Long version;
+    
     // Transient field to indicate temporary reservation status
     // This doesn't affect the database, only used for API responses
     @Transient

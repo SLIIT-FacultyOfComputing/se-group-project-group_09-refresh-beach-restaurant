@@ -32,6 +32,12 @@ This directory contains SQL scripts for maintaining and fixing the restaurant re
 - Checks for orphaned reservations (tables that don't exist)
 - Verifies the state of tables and upcoming reservations
 
+### 06_add_reservation_indexes.sql
+- Adds database indexes to improve query performance
+- Creates an index for looking up reservations by table, date, time, and status
+- Creates an index for looking up reservations by customer ID
+- Significantly improves performance for availability checks and customer reservation history
+
 ## Usage
 
 Execute these scripts in numerical order when performing database maintenance or when
