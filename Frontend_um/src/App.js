@@ -8,6 +8,10 @@ import ForgotPassword from './components/ForgotPassword';
 import AdminDashboard from './components/AdminDashboard';
 import UserDashboard from './components/UserDashboard';
 import OrderHistory from './components/orderHisory';
+import EditAddress from './components/EditAddress';
+
+
+
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -48,6 +52,7 @@ function App() {
                     <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/admin-dashboard" element={<AdminDashboard />} />
                     <Route path="/user-dashboard" element={<UserDashboard />} />
+                    <Route path="/edit-address/:userId" element={<EditAddress />} />
                     <Route path="/order-history/:userId" element={<OrderHistory />} /> {/* ✅ New route */}
                 </Routes>
 
