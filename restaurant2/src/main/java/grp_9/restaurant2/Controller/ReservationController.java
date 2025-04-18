@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -15,6 +16,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import jakarta.annotation.PostConstruct;
+
 @RestController
 @RequestMapping("/api/reservations")
 @CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173", "http://localhost:8579", "http://localhost:8931"})
@@ -22,6 +25,20 @@ public class ReservationController {
 
     @Autowired
     private ReservationService reservationService;
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    @PostConstruct
+    public void initializeAndFixData() {
+        // Fix case sensitivity issues in status field
+        try {
+            jdbcTemplate.update("UPDATE reservations SET status = 'UPCOMING' WHERE status = 'Upcoming'");
+            System.out.println("Fixed case sensitivity in reservations status field");
+        } catch (Exception e) {
+            System.err.println("Error fixing reservation status case: " + e.getMessage());
+        }
+    }
 
     @PostMapping(value = "/add", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Map<String, Object>> addReservation(@RequestBody Reservation reservation) {

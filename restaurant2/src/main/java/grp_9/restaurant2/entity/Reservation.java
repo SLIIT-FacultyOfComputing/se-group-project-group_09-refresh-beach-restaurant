@@ -1,5 +1,6 @@
 package grp_9.restaurant2.entity;
 
+import grp_9.restaurant2.config.JpaConfig.ReservationStatusConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,7 +34,7 @@ public class Reservation {
     @Column(name = "reservation_time")
     private LocalTime reservationTime;
     
-    @Enumerated(EnumType.STRING)
+    @Convert(converter = ReservationStatusConverter.class)
     @Column(name = "status")
     private ReservationStatus status = ReservationStatus.UPCOMING;
     
