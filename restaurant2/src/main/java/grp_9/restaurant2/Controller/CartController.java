@@ -1,37 +1,44 @@
 package grp_9.restaurant2.Controller;
 
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 import grp_9.restaurant2.entity.CartItem;
 import grp_9.restaurant2.service.CartService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/cart")
-@CrossOrigin("http://localhost:5173")
+@CrossOrigin(origins = "*") // Allow frontend access
 public class CartController {
-    @Autowired
-    private CartService cartService;
+    private final CartService cartService;
 
+    public CartController(CartService cartService) {
+        this.cartService = cartService;
+    }
+
+    // Get all cart items
     @GetMapping
     public List<CartItem> getCartItems() {
         return cartService.getAllCartItems();
     }
 
-    @PostMapping("/add/{menuItemId}")
-    public CartItem addToCart(@PathVariable Long menuItemId) {
-        return cartService.addToCart(menuItemId);
+    // Add item to cart (increase quantity if exists)
+    @PostMapping
+    public ResponseEntity<CartItem> addToCart(@RequestBody CartItem item) {
+        return ResponseEntity.ok(cartService.addOrUpdateCartItem(item));
     }
 
-    @DeleteMapping("/remove/{cartItemId}")
-    public void removeFromCart(@PathVariable Long cartItemId) {
-        cartService.removeFromCart(cartItemId);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> removeFromCart(@PathVariable Long id) {
+        cartService.removeCartItem(id);
+        return ResponseEntity.ok("Item removed from cart.");
     }
 
-    @DeleteMapping("/clear")
-    public void clearCart() {
+    // Checkout (clear cart & notify frontend)
+    @PostMapping("/checkout")
+    public ResponseEntity<String> proceedToCheckout() {
         cartService.clearCart();
+        return ResponseEntity.ok("Order placed successfully!");
     }
 }
-
