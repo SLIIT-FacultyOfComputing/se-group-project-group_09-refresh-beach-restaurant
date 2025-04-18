@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 import LogoutButton from './LogoutButton'; // Import LogoutButton component
 
 const MyProfile = () => {
     const { userId } = useParams();
-    const navigate = useNavigate();
 
     // State for form fields
     const [username, setUsername] = useState('');
@@ -92,12 +91,7 @@ const MyProfile = () => {
                     <p><strong>Email:</strong> {displayEmail}</p>
                 </div>
 
-                <button
-                    style={styles.rightButton}
-                    onClick={() => navigate(`/order-history/${userId}`)}
-                >
-                    Order History
-                </button>
+                <button style={styles.rightButton}>Order History</button>
                 <button style={styles.rightButton}>My Cart</button>
                 <button style={styles.rightButton}>Edit Address</button>
                 <button style={styles.rightButton}>Payment Methods</button>

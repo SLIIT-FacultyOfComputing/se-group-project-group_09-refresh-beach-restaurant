@@ -5,23 +5,22 @@ import Login from './components/Login';
 import UpdateProfile from './components/UpdateProfile';
 import Home from './components/Home';
 import ForgotPassword from './components/ForgotPassword';
-import AdminDashboard from './components/AdminDashboard';  // Admin Dashboard
-import UserDashboard from './components/UserDashboard';    // User Dashboard
-import LogoutButton from './components/LogoutButton';  // If LogoutButton component is used
+import AdminDashboard from './components/AdminDashboard';
+import UserDashboard from './components/UserDashboard';
+import OrderHistory from './components/orderHisory';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [userRole, setUserRole] = useState(null);  // Track user role (admin or user)
+    const [userRole, setUserRole] = useState(null);
 
-    // This function is passed to Login component to handle login
     const handleLogin = (role) => {
         setIsLoggedIn(true);
-        setUserRole(role);  // Set role after login (admin or user)
+        setUserRole(role);
     };
 
     const handleLogout = () => {
         setIsLoggedIn(false);
-        setUserRole(null);  // Clear role when logged out
+        setUserRole(null);
     };
 
     return (
@@ -29,12 +28,10 @@ function App() {
             <div>
                 {isLoggedIn && (
                     <nav style={{ padding: '20px', backgroundColor: '#f4f4f4' }}>
-                        {/* Render dashboard link */}
                         <Link to={userRole === 'admin' ? '/admin-dashboard' : '/user-dashboard'} style={{ marginRight: '10px' }}>
                             Dashboard
                         </Link>
 
-                        {/* Conditionally render Profile link based on role */}
                         {userRole !== 'admin' && (
                             <Link to="/profile/1" style={{ marginRight: '10px' }}>
                                 Profile
@@ -51,9 +48,9 @@ function App() {
                     <Route path="/forgot-password" element={<ForgotPassword />} />
                     <Route path="/admin-dashboard" element={<AdminDashboard />} />
                     <Route path="/user-dashboard" element={<UserDashboard />} />
+                    <Route path="/order-history/:userId" element={<OrderHistory />} /> {/* ✅ New route */}
                 </Routes>
 
-                {/* Place logout button outside the dashboards */}
                 {isLoggedIn && (
                     <div style={{ padding: '10px', backgroundColor: '#f4f4f4' }}>
                         <button onClick={handleLogout}>Logout</button>
