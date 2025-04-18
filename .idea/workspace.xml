@@ -26,10 +26,6 @@
       <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UserDashboard.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/signup.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
-feature/user-management
-=======
-
-main
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -331,12 +327,6 @@ main
       <workItem from="1743429581804" duration="1471000" />
       <workItem from="1743494421084" duration="14220000" />
       <workItem from="1743528057550" duration="1243000" />
-      <workItem from="1743583997601" duration="2692000" />
-      <workItem from="1743593760727" duration="930000" />
-      <workItem from="1743801534805" duration="600000" />
-      <workItem from="1743850259829" duration="601000" />
-      <workItem from="1744219633857" duration="594000" />
-      <workItem from="1744807887969" duration="1196000" />
     </task>
     <servers />
   </component>

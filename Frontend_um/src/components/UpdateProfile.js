@@ -99,7 +99,13 @@ const MyProfile = () => {
                     Order History
                 </button>
                 <button style={styles.rightButton}>My Cart</button>
-                <button style={styles.rightButton}>Edit Address</button>
+                <button
+                    style={styles.rightButton}
+                    onClick={() => navigate(`/edit-address/${userId}`)}
+                >
+                    Edit Address
+                </button>
+
                 <button style={styles.rightButton}>Payment Methods</button>
 
                 {/* Replace with the LogoutButton */}
