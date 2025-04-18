@@ -2,6 +2,7 @@ package com.bskjp.refresh.restaurant.controller;
 
 import com.bskjp.refresh.restaurant.dto.UserDTO;
 import com.bskjp.refresh.restaurant.model.Address;
+import com.bskjp.refresh.restaurant.model.Order;
 import com.bskjp.refresh.restaurant.security.CustomUserDetailsService;
 import com.bskjp.refresh.restaurant.service.NotificationService;
 import com.bskjp.refresh.restaurant.service.UserService;
@@ -11,6 +12,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
@@ -59,5 +62,11 @@ public class UserController {
     @PutMapping("/{userId}/addresses/{addressId}/default")
     public ResponseEntity<UserDTO> setDefaultAddress(@PathVariable Long userId, @PathVariable Long addressId) throws Throwable {
         return ResponseEntity.ok(userService.setDefaultAddress(userId, addressId));
+    }
+
+    // 🚀 ORDER HISTORY ENDPOINT
+    @GetMapping("/{userId}/orders")
+    public ResponseEntity<List<Order>> getOrderHistory(@PathVariable Long userId) throws Throwable {
+        return ResponseEntity.ok(userService.getOrderHistory(userId));
     }
 }
