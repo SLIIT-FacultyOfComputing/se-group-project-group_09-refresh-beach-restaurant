@@ -3,7 +3,7 @@ package com.bskjp.refresh.restaurant.model;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-@Entity
+@Entity  // <-- This annotation was missing
 @Table(name = "orders")
 public class Order {
     @Id

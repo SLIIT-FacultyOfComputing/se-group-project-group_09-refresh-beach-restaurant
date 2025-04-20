@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useNavigate, useParams } from 'react-router-dom';
 import LogoutButton from './LogoutButton'; // Import LogoutButton component
 
 const MyProfile = () => {
@@ -16,7 +16,7 @@ const MyProfile = () => {
     const [newPassword, setNewPassword] = useState('');
     const [confirmNewPassword, setConfirmNewPassword] = useState('');
 
-    // Displayed username & email (updates after Save)
+    // Displayed username & email
     const [displayUsername, setDisplayUsername] = useState('');
     const [displayEmail, setDisplayEmail] = useState('');
 
@@ -29,7 +29,6 @@ const MyProfile = () => {
                 setPhone(user.phone);
                 setAddress(user.address);
 
-                // Set initial display values
                 setDisplayUsername(user.username);
                 setDisplayEmail(user.email);
             })
@@ -46,8 +45,6 @@ const MyProfile = () => {
         try {
             await axios.put(`http://localhost:8080/api/users/update/${userId}`, updatedUser);
             alert('Profile updated successfully!');
-
-            // Update displayed values after saving
             setDisplayUsername(username);
             setDisplayEmail(email);
         } catch (error) {
@@ -58,7 +55,6 @@ const MyProfile = () => {
 
     return (
         <div style={styles.container}>
-            {/* Left Side - Profile Form */}
             <div style={styles.leftSide}>
                 <h2>My Profile</h2>
                 <form onSubmit={handleSubmit} style={styles.form}>
@@ -84,38 +80,27 @@ const MyProfile = () => {
                 </form>
             </div>
 
-            {/* Right Side - Profile Info & Actions */}
             <div style={styles.rightSide}>
                 <div style={styles.profileSection}>
-                    <img src="https://via.placeholder.com/150" alt="Profile" style={styles.profilePic} />
+                    <img src="https://via.placeholder.com/150" alt="Profile" style={styles.profilePic}/>
                     <p><strong>Username:</strong> {displayUsername}</p>
                     <p><strong>Email:</strong> {displayEmail}</p>
                 </div>
 
-                <button
-                    style={styles.rightButton}
-                    onClick={() => navigate(`/order-history/${userId}`)}
-                >
-                    Order History
-                </button>
                 <button style={styles.rightButton}>My Cart</button>
-                <button
-                    style={styles.rightButton}
-                    onClick={() => navigate(`/edit-address/${userId}`)}
-                >
-                    Edit Address
+                <button style={styles.rightButton} onClick={() => navigate(`/order-history/${userId}`)}>Order History
+                </button>
+                <button style={styles.rightButton} onClick={() => navigate(`/edit-address/${userId}`)}>Edit Address
+                </button>
+                <button style={styles.rightButton} onClick={() => navigate(`/payment-methods/${userId}`)}>Payment Methods
                 </button>
 
-                <button style={styles.rightButton}>Payment Methods</button>
-
-                {/* Replace with the LogoutButton */}
-                <LogoutButton />
+                <LogoutButton/>
             </div>
         </div>
     );
 };
 
-// Inline Styles
 const styles = {
     container: {
         display: 'flex',
@@ -124,6 +109,7 @@ const styles = {
         maxWidth: '800px',
         margin: 'auto',
         padding: '20px',
+
     },
     leftSide: {
         flex: 1,
@@ -141,6 +127,7 @@ const styles = {
         height: '120px',
         borderRadius: '50%',
         marginBottom: '10px',
+
     },
     form: {
         display: 'flex',
@@ -152,6 +139,7 @@ const styles = {
         fontWeight: 'bold',
         textAlign: 'right',
         width: '100%',
+
     },
     input: {
         width: '100%',
@@ -159,6 +147,7 @@ const styles = {
         marginBottom: '15px',
         border: '1px solid #ccc',
         borderRadius: '5px',
+        backgroundColor: '#f0f0f0',
     },
     saveButton: {
         padding: '10px',
@@ -176,6 +165,18 @@ const styles = {
         border: 'none',
         borderRadius: '5px',
         backgroundColor: '#FFFFFF',
+        color: 'black',
+        fontSize: '16px',
+        cursor: 'pointer',
+        transition: '0.3s',
+        marginBottom: '10px',
+    },
+    button: {
+        width: '100%',
+        padding: '12px',
+        border: 'none',
+        borderRadius: '5px',
+        backgroundColor: '#f0f0f0',
         color: 'black',
         fontSize: '16px',
         cursor: 'pointer',

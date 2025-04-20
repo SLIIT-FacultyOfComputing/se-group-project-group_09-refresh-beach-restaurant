@@ -23,7 +23,7 @@ const LogoutButton = () => {
             border: 'none',
             borderRadius: '5px',
             cursor: 'pointer',
-            width: '50%',  // Set to 50% width
+            width: '20%',  // Set to 50% width
             fontSize: '16px',
         },
     };
