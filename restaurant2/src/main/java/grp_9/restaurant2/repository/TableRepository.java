@@ -4,13 +4,16 @@ import grp_9.restaurant2.entity.ReservationStatus;
 import grp_9.restaurant2.entity.RestaurantTable;
 import grp_9.restaurant2.entity.TableStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import jakarta.persistence.LockModeType;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface TableRepository extends JpaRepository<RestaurantTable, Long> {
@@ -22,6 +25,11 @@ public interface TableRepository extends JpaRepository<RestaurantTable, Long> {
     default List<RestaurantTable> findAvailableTables() {
         return findByStatus(TableStatus.AVAILABLE);
     }
+    
+    // Add pessimistic lock when retrieving a table for reservation
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    @Query("SELECT t FROM RestaurantTable t WHERE t.id = :tableId")
+    Optional<RestaurantTable> findByIdWithLock(@Param("tableId") Long tableId);
     
     // Custom query to find tables that don't have a reservation for the specified date and time
     // Using UPPER() to make case-insensitive comparison
