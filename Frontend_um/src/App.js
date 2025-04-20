@@ -6,9 +6,15 @@ import UpdateProfile from './components/UpdateProfile';
 import Home from './components/Home';
 import ForgotPassword from './components/ForgotPassword';
 import AdminDashboard from './components/AdminDashboard';
+import ViewAllUsers from './components/ViewAllUsers';
+import AddNewUser from './components/AddNewUser';
+import UpdateDeleteUsers from './components/UpdateDeleteUsers';
+
 import UserDashboard from './components/UserDashboard';
 import OrderHistory from './components/orderHisory';
 import EditAddress from './components/EditAddress';
+import PaymentMethods from './components/PaymentMethods';
+
 
 
 
@@ -53,7 +59,11 @@ function App() {
                     <Route path="/admin-dashboard" element={<AdminDashboard />} />
                     <Route path="/user-dashboard" element={<UserDashboard />} />
                     <Route path="/edit-address/:userId" element={<EditAddress />} />
-                    <Route path="/order-history/:userId" element={<OrderHistory />} /> {/* ✅ New route */}
+                    <Route path="/view-users" element={<ViewAllUsers />} />
+                    <Route path="/add-user" element={<AddNewUser />} />
+                    <Route path="/manage-users" element={<UpdateDeleteUsers />} />
+                    <Route path="/payment-methods/:userId" element={<PaymentMethods />} />
+                    <Route path="/order-history/:userId" element={<OrderHistory />} /> {/*  New route */}
                 </Routes>
 
                 {isLoggedIn && (

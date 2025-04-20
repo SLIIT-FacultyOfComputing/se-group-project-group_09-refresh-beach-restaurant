@@ -1,4 +1,5 @@
 package com.bskjp.refresh.restaurant.model;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -43,6 +44,10 @@ public class User {
     @JoinColumn(name = "user_id")
     private List<Address> addresses = new ArrayList<>();
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private List<PaymentMethod> paymentMethods = new ArrayList<>();
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
@@ -58,8 +63,15 @@ public class User {
         addresses.remove(address);
     }
 
+    public void addPaymentMethod(PaymentMethod paymentMethod) {
+        paymentMethods.add(paymentMethod);
+    }
+
+    public void removePaymentMethod(PaymentMethod paymentMethod) {
+        paymentMethods.remove(paymentMethod);
+    }
+
     public List<Order> getOrders() {
         return List.of();
     }
-
 }
