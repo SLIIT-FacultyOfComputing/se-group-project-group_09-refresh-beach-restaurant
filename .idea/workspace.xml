@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/database/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Restaurant2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Restaurant2Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/ReservationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/ReservationStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,6 +404,9 @@
       <workItem from="1744219633857" duration="594000" />
       <workItem from="1744807887969" duration="2683000" />
       <workItem from="1744870283334" duration="2114000" />
+      <workItem from="1745211823569" duration="1120000" />
+      <workItem from="1745230307024" duration="512000" />
+      <workItem from="1745231572627" duration="2204000" />
     </task>
     <servers />
   </component>
