@@ -1,13 +1,9 @@
 package grp_9.restaurant2.entity;
 
 import jakarta.persistence.*;
-import lombok.*;
 
 @Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Table(name = "cart_items")
 public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,5 +14,16 @@ public class CartItem {
     private MenuItem menuItem;
 
     private int quantity;
+
+    // Getters and Setters
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
+    public MenuItem getMenuItem() { return menuItem; }
+    public void setMenuItem(MenuItem menuItem) { this.menuItem = menuItem; }
+    public int getQuantity() { return quantity; }
+    public void setQuantity(int quantity) { this.quantity = quantity; }
+
+
+
 }
 

@@ -1,51 +1,52 @@
 package grp_9.restaurant2.service;
 
+import org.springframework.stereotype.Service;
 import grp_9.restaurant2.entity.CartItem;
 import grp_9.restaurant2.entity.MenuItem;
-import grp_9.restaurant2.repository.CartItemRepository;
+import grp_9.restaurant2.repository.CartRepository;
 import grp_9.restaurant2.repository.MenuItemRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class CartService {
-    @Autowired
-    private CartItemRepository cartItemRepository;
+    private final CartRepository cartRepository;
+    private final MenuItemRepository menuItemRepository;
 
-    @Autowired
-    private MenuItemRepository menuItemRepository;
+    public CartService(CartRepository cartRepository, MenuItemRepository menuItemRepository) {
+        this.cartRepository = cartRepository;
+        this.menuItemRepository = menuItemRepository;
+    }
 
     public List<CartItem> getAllCartItems() {
-        return cartItemRepository.findAll();
+        return cartRepository.findAll();
     }
 
-    public CartItem addToCart(Long menuItemId) {
-        Optional<MenuItem> menuItemOptional = menuItemRepository.findById(menuItemId);
-        if (menuItemOptional.isPresent()) {
-            MenuItem menuItem = menuItemOptional.get();
-            List<CartItem> existingItems = cartItemRepository.findByMenuItemId(menuItemId);
-            if (!existingItems.isEmpty()) {
-                CartItem existingCartItem = existingItems.get(0);
-                existingCartItem.setQuantity(existingCartItem.getQuantity() + 1);
-                return cartItemRepository.save(existingCartItem);
-            } else {
-                CartItem cartItem = new CartItem();
-                cartItem.setMenuItem(menuItem);
-                cartItem.setQuantity(1);
-                return cartItemRepository.save(cartItem);
-            }
+    public CartItem addOrUpdateCartItem(CartItem item) {
+        Optional<CartItem> existingCartItem = cartRepository.findByMenuItemId(item.getMenuItem().getId());
+
+        if (existingCartItem.isPresent()) {
+            // If item is already in cart, increase quantity
+            CartItem cartItem = existingCartItem.get();
+            cartItem.setQuantity(cartItem.getQuantity() + 1);
+            return cartRepository.save(cartItem);
+        } else {
+            // Fetch the actual MenuItem from the database
+            MenuItem menuItem = menuItemRepository.findById(item.getMenuItem().getId())
+                    .orElseThrow(() -> new RuntimeException("MenuItem not found"));
+
+            item.setMenuItem(menuItem);
+            item.setQuantity(1); // Default quantity 1 if new
+            return cartRepository.save(item);
         }
-        throw new RuntimeException("Menu Item Not Found");
     }
 
-    public void removeFromCart(Long cartItemId) {
-        cartItemRepository.deleteById(cartItemId);
+    public void removeCartItem(Long id) {
+        cartRepository.deleteById(id);
     }
 
     public void clearCart() {
-        cartItemRepository.deleteAll();
+        cartRepository.deleteAll();
     }
 }
-
