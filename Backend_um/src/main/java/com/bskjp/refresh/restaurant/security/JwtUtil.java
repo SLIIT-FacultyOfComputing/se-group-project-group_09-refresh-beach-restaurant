@@ -34,6 +34,11 @@ public class JwtUtil {
         return extractClaim(token, Claims::getSubject);
     }
 
+    // New method to extract userId from token
+    public String getUserIdFromToken(String token) {
+        return extractClaim(token, claims -> claims.get("userId", String.class));
+    }
+
     public Date extractExpiration(String token) {
         return extractClaim(token, Claims::getExpiration);
     }
@@ -59,8 +64,22 @@ public class JwtUtil {
         return generateToken(new HashMap<>(), userDetails, jwtExpiration);
     }
 
+    // Updated method to include userId in the token
+    public String generateToken(UserDetails userDetails, String userId) {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("userId", userId);
+        return generateToken(claims, userDetails, jwtExpiration);
+    }
+
     public String generateRefreshToken(UserDetails userDetails) {
         return generateToken(new HashMap<>(), userDetails, refreshExpiration);
+    }
+
+    // Updated method to include userId in the refresh token
+    public String generateRefreshToken(UserDetails userDetails, String userId) {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("userId", userId);
+        return generateToken(claims, userDetails, refreshExpiration);
     }
 
     private String generateToken(Map<String, Object> extraClaims, UserDetails userDetails, long expiration) {
