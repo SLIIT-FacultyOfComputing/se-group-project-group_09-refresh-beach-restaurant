@@ -1,8 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableName }) => {
     const [isReserving, setIsReserving] = useState(false);
     const [reservationStatus, setReservationStatus] = useState(null);
+    const [reservationSuccess, setReservationSuccess] = useState(false);
+    const navigate = useNavigate();
 
     // Helper function to convert 12-hour time format to 24-hour format
     const convertTo24HourFormat = (timeString) => {
@@ -72,6 +75,7 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
                 // Simulate a network delay
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 setReservationStatus("Table reserved successfully!");
+                setReservationSuccess(true);
                 alert("Table reserved successfully!");
             } else {
                 // Real backend call with the correct port (8085)
@@ -101,6 +105,7 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
                     console.log("Response data:", result);
 
                     setReservationStatus(result.message || "Table reserved successfully!");
+                    setReservationSuccess(true);
                     alert(result.message || "Table reserved successfully!");
                 } catch (error) {
                     console.error("Fetch error details:", error);
@@ -116,15 +121,28 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
         }
     };
 
+    const handleViewReservation = () => {
+        navigate("/my-reservations");
+    };
+
     return (
         <div className="text-center">
-            <button
-                className={`mt-4 px-6 py-3 ${isReserving ? 'bg-gray-500' : 'bg-yellow-500 hover:bg-yellow-600'} text-black font-bold rounded-lg`}
-                onClick={handleConfirm}
-                disabled={isReserving}
-            >
-                {isReserving ? "Processing..." : `Confirm Reservation`}
-            </button>
+            {!reservationSuccess ? (
+                <button
+                    className={`mt-4 px-6 py-3 ${isReserving ? 'bg-gray-500' : 'bg-yellow-500 hover:bg-yellow-600'} text-black font-bold rounded-lg`}
+                    onClick={handleConfirm}
+                    disabled={isReserving}
+                >
+                    {isReserving ? "Processing..." : `Confirm Reservation`}
+                </button>
+            ) : (
+                <button
+                    className="mt-4 px-6 py-3 w-64 bg-yellow-500 text-black font-bold p-2 rounded w-full hover:bg-yellow-600 "
+                    onClick={handleViewReservation}
+                >
+                    View Reservation
+                </button>
+            )}
             
             {reservationStatus && (
                 <p className={`mt-4 ${reservationStatus.includes('Failed') ? 'text-red-500' : 'text-green-500'}`}>
