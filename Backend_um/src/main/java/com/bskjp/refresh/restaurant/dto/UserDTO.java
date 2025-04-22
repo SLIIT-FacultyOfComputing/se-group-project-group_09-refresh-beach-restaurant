@@ -10,9 +10,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-import java.util.List;
-
-@Data
+import java.util.List;@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDTO {
@@ -28,6 +26,7 @@ public class UserDTO {
     @Email(message = "Email must be valid")
     private String email;
 
+    @NotBlank(message = "Password is required") // 👈 Add this line
     private String password;
 
     @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be 10 digits")

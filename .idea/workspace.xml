@@ -4,44 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
- feature/user-management
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="" />
-=======
-    <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/database/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/database/README.md" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/logo.jpeg" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/restaurant-bg.jpg" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/index.html" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/App.css" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/App.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/App.test.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/index.css" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/index.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/AdminDashboard.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/ForgotPassword.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/Home.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/Login.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/LogoutButton.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UpdateProfile.css" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UpdateProfile.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/UserDashboard.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/src/pages/User_Management/signup.js" beforeDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/pom.xml" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Restaurant2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Restaurant2Application.java" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/ReservationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/ReservationStatus.java" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/RestaurantTable.java" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/TableRepository.java" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
-<change beforePath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" afterDir="false" />
-
-    </list>
-    main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -343,17 +306,7 @@
       <workItem from="1743429581804" duration="1471000" />
       <workItem from="1743494421084" duration="14220000" />
       <workItem from="1743528057550" duration="1243000" />
-feature/user-management
       <workItem from="1744954049755" duration="18000" />
-=======
-<workItem from="1743583997601" duration="2692000" />
-<workItem from="1743593760727" duration="930000" />
-<workItem from="1743801534805" duration="600000" />
-<workItem from="1743850259829" duration="601000" />
-<workItem from="1744219633857" duration="594000" />
-<workItem from="1744807887969" duration="2683000" />
-<workItem from="1744870283334" duration="2114000" />
-main
     </task>
     <servers />
   </component>
