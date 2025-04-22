@@ -309,9 +309,8 @@ const CustomizeItem = ({ onClose, onAddToCart, itemData }) => {
   const [loading, setLoading] = useState(false)
 
   // Define customization options based on item type
-  // These could be fetched from an API in a real application
   const getCustomizationOptions = () => {
-    // Pizza options
+    // Example for Pizza options
     if (item.name.toLowerCase().includes("pizza")) {
       return {
         sizes: [
@@ -343,7 +342,7 @@ const CustomizeItem = ({ onClose, onAddToCart, itemData }) => {
         ],
       }
     }
-    // Chicken options
+    //Example for Chicken options
     else if (item.name.toLowerCase().includes("chicken")) {
       return {
         sizes: [
@@ -364,7 +363,7 @@ const CustomizeItem = ({ onClose, onAddToCart, itemData }) => {
         ],
       }
     }
-    // Prawn/seafood options
+    // Example for Prawn/seafood options
     else if (item.name.toLowerCase().includes("prawn")) {
       return {
         sizes: [
