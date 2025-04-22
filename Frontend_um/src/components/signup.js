@@ -31,10 +31,21 @@ const SignUp = () => {
                 <div>
                     <input
                         type="Name"
-                        name="Name"
+                        name="firstName"
                         value={formData.Name}
                         onChange={handleChange}
-                        placeholder="Name"
+                        placeholder="firstName"
+                        required
+                        style={{padding: '10px', marginBottom: '10px', width: '40%'}}
+                    />
+                </div>
+                <div>
+                    <input
+                        type="Name"
+                        name="lastName"
+                        value={formData.Name}
+                        onChange={handleChange}
+                        placeholder="lastName"
                         required
                         style={{padding: '10px', marginBottom: '10px', width: '40%'}}
                     />
@@ -62,13 +73,15 @@ const SignUp = () => {
                     />
                 </div>
 
+
+
                 <div>
                     <input
-                        type="password"
-                        name="confirmPassword"
-                        value={formData.confirmPassword}
+                        type="phone number"
+                        name="phoneNumber"
+                        value={formData.Name}
                         onChange={handleChange}
-                        placeholder="Confirm Password"
+                        placeholder="phoneNumber"
                         required
                         style={{padding: '10px', marginBottom: '10px', width: '40%'}}
                     />

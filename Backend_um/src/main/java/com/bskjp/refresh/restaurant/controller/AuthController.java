@@ -34,4 +34,7 @@ public class AuthController {
     public ResponseEntity<AuthResponse> refreshToken(@RequestBody String refreshToken) throws Throwable {
         return ResponseEntity.ok(authService.refreshToken(refreshToken));
     }
+
+
+
 }

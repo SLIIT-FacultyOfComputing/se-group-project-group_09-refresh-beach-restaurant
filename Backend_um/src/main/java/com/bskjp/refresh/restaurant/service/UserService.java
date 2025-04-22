@@ -24,13 +24,43 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public UserDTO getUserById(Long id) throws Throwable {
+    // Add this method to handle user creation
+    public UserDTO createUser(UserDTO userDTO) {
+        User user = new User();
+        user.setFirstName(userDTO.getFirstName());
+        user.setLastName(userDTO.getLastName());
+        user.setEmail(userDTO.getEmail());
+        user.setPhoneNumber(userDTO.getPhoneNumber());
+        user.setRole(userDTO.getRole() != null ? userDTO.getRole() : UserRole.USER);
+        user.setEnabled(userDTO.isEnabled());
+
+        // Encode password if provided
+        if (userDTO.getPassword() != null && !userDTO.getPassword().isEmpty()) {
+            user.setPassword(passwordEncoder.encode(userDTO.getPassword()));
+        }
+
+        // Save addresses if provided
+        if (userDTO.getAddresses() != null && !userDTO.getAddresses().isEmpty()) {
+            userDTO.getAddresses().forEach(user::addAddress);
+
+            // Set first address as default if none is marked as default
+            boolean hasDefault = user.getAddresses().stream().anyMatch(Address::isDefault);
+            if (!hasDefault && !user.getAddresses().isEmpty()) {
+                user.getAddresses().get(0).setDefault(true);
+            }
+        }
+
+        User savedUser = userRepository.save(user);
+        return convertToDTO(savedUser);
+    }
+
+    public UserDTO getUserById(Long id) throws ResourceNotFoundException {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
         return convertToDTO(user);
     }
 
-    public UserDTO getUserByEmail(String email) throws Throwable {
+    public UserDTO getUserByEmail(String email) throws ResourceNotFoundException {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "email", email));
         return convertToDTO(user);
@@ -48,7 +78,7 @@ public class UserService {
                 .collect(Collectors.toList());
     }
 
-    public UserDTO updateUser(Long id, UserDTO userDTO) throws Throwable {
+    public UserDTO updateUser(Long id, UserDTO userDTO) throws ResourceNotFoundException {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
 
@@ -64,13 +94,13 @@ public class UserService {
         return convertToDTO(updatedUser);
     }
 
-    public void deleteUser(Long id) throws Throwable {
+    public void deleteUser(Long id) throws ResourceNotFoundException {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", id));
         userRepository.delete(user);
     }
 
-    public UserDTO addAddress(Long userId, Address address) throws Throwable {
+    public UserDTO addAddress(Long userId, Address address) throws ResourceNotFoundException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
@@ -84,7 +114,7 @@ public class UserService {
         return convertToDTO(updatedUser);
     }
 
-    public UserDTO updateAddress(Long userId, Long addressId, Address updatedAddress) throws Throwable {
+    public UserDTO updateAddress(Long userId, Long addressId, Address updatedAddress) throws ResourceNotFoundException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
@@ -109,7 +139,7 @@ public class UserService {
         return convertToDTO(savedUser);
     }
 
-    public UserDTO deleteAddress(Long userId, Long addressId) throws Throwable {
+    public UserDTO deleteAddress(Long userId, Long addressId) throws ResourceNotFoundException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
@@ -129,7 +159,7 @@ public class UserService {
         return convertToDTO(updatedUser);
     }
 
-    public UserDTO setDefaultAddress(Long userId, Long addressId) throws Throwable {
+    public UserDTO setDefaultAddress(Long userId, Long addressId) throws ResourceNotFoundException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
 
@@ -145,7 +175,7 @@ public class UserService {
         return convertToDTO(updatedUser);
     }
 
-    public UserDTO setUserRole(Long userId, UserRole role) throws Throwable {
+    public UserDTO setUserRole(Long userId, UserRole role) throws ResourceNotFoundException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
         user.setRole(role);
@@ -154,7 +184,7 @@ public class UserService {
     }
 
     // 🔥 ORDER HISTORY LOGIC
-    public List<Order> getOrderHistory(Long userId) throws Throwable {
+    public List<Order> getOrderHistory(Long userId) throws ResourceNotFoundException {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userId));
         return user.getOrders(); // Ensure `orders` is mapped in User class

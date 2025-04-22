@@ -64,7 +64,7 @@ public class UserController {
         return ResponseEntity.ok(userService.setDefaultAddress(userId, addressId));
     }
 
-    // 🚀 ORDER HISTORY ENDPOINT
+    //  ORDER HISTORY ENDPOINT
     @GetMapping("/{userId}/orders")
     public ResponseEntity<List<Order>> getOrderHistory(@PathVariable Long userId) throws Throwable {
         return ResponseEntity.ok(userService.getOrderHistory(userId));
