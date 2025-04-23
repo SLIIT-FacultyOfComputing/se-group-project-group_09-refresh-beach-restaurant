@@ -1,0 +1,122 @@
+.hero-section {
+    background-image: linear-gradient(rgba(26, 58, 95, 0.8), rgba(26, 58, 95, 0.8)),
+      url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-puw0Nj9OkmEbW7wOI7zbeHACf53a36.png");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto 4rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #d4af37;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .primary-button,
+  .secondary-button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .primary-button {
+    background-color: #d4af37;
+    color: #1a3a5f;
+    border: none;
+  }
+  
+  .primary-button:hover {
+    background-color: #c49c2f;
+  }
+  
+  .secondary-button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+  }
+  
+  .secondary-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hero-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .info-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    min-width: 250px;
+    flex: 1;
+  }
+  
+  .info-icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: #d4af37;
+  }
+  
+  .info-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: #d4af37;
+  }
+  
+  .info-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .primary-button,
+    .secondary-button {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .info-card {
+      min-width: 100%;
+    }
+  }
+  
