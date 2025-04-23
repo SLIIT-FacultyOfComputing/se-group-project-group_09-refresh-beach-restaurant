@@ -1,0 +1,158 @@
+.featured-items {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .section-header h2 {
+    color: #1a3a5f;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .section-header p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  .items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .menu-item-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .item-image {
+    position: relative;
+    height: 200px;
+  }
+  
+  .item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .item-category {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #1a3a5f;
+    color: #fff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+  }
+  
+  .item-content {
+    padding: 1.5rem;
+  }
+  
+  .item-content h3 {
+    color: #1a3a5f;
+    margin: 0 0 0.8rem;
+    font-size: 1.3rem;
+  }
+  
+  .item-description {
+    color: #666;
+    margin: 0 0 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item-price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #1a3a5f;
+  }
+  
+  .item-actions {
+    display: flex;
+    gap: 0.8rem;
+  }
+  
+  .review-button,
+  .add-button {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .review-button {
+    background-color: #f0e6c9;
+    color: #1a3a5f;
+  }
+  
+  .review-button:hover {
+    background-color: #d4af37;
+  }
+  
+  .add-button {
+    background-color: #1a3a5f;
+    color: #fff;
+  }
+  
+  .add-button:hover {
+    background-color: #2c5282;
+  }
+  
+  .view-all {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .view-all-button {
+    background-color: #1a3a5f;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-all-button:hover {
+    background-color: #2c5282;
+  }
+  
+  @media (max-width: 768px) {
+    .featured-items {
+      padding: 3rem 1rem;
+    }
+  
+    .items-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
