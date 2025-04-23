@@ -363,27 +363,7 @@ const CustomizeItem = ({ onClose, onAddToCart, itemData }) => {
         ],
       }
     }
-    // Example for Prawn/seafood options
-    else if (item.name.toLowerCase().includes("prawn")) {
-      return {
-        sizes: [
-          { id: "small", name: "Small Portion", price: -500.0 },
-          { id: "regular", name: "Regular Portion", price: 0 },
-          { id: "large", name: "Large Portion", price: 800.0 },
-        ],
-        crusts: [], // No crust options for prawns
-        toppings: [
-          { id: "extra-prawns", name: "Extra Prawns", price: 600.0 },
-          { id: "extra-sauce", name: "Extra Sauce", price: 150.0 },
-        ],
-        extras: [
-          { id: "tartar-sauce", name: "Tartar Sauce", price: 100.0 },
-          { id: "lemon-wedges", name: "Lemon Wedges", price: 50.0 },
-          { id: "garlic-butter", name: "Garlic Butter", price: 150.0 },
-          { id: "fries", name: "French Fries", price: 350.0 },
-        ],
-      }
-    }
+    
     // Default options for other items
     else {
       return {
