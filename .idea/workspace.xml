@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +181,7 @@
     &quot;git-widget-placeholder&quot;: &quot;feature/reservations-v2&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/Y2S2/SE/Project/v1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop/reservation/restaurant2&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -406,7 +406,10 @@
       <workItem from="1744870283334" duration="2114000" />
       <workItem from="1745211823569" duration="1120000" />
       <workItem from="1745230307024" duration="512000" />
-      <workItem from="1745231572627" duration="2204000" />
+      <workItem from="1745231572627" duration="4881000" />
+      <workItem from="1745391550876" duration="1850000" />
+      <workItem from="1746042095009" duration="328000" />
+      <workItem from="1746042602153" duration="1486000" />
     </task>
     <servers />
   </component>
