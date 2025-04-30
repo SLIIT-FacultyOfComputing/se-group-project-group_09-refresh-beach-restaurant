@@ -10,13 +10,13 @@ feature/user-management
 =======
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
 <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/database/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/database/README.md" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/logo.jpeg" beforeDir="false" />
-...
 
     </list>
     main
@@ -79,7 +79,7 @@ main
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
+<component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.BackendApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -100,10 +100,10 @@ main
     "Spring Boot.BackendApplication.executor": "Run",
     "Spring Boot.Restaurant2Application.executor": "Run",
     "Spring Boot.backend.executor": "Run",
-    "git-widget-placeholder": "feature/user-management",
+    "git-widget-placeholder": "feature/reservations-v2",  // or "feature/user-management" — pick one
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/2_Y2/newclone",
+    "last_opened_file_path": "C:/Users/User/Desktop/reservation/restaurant2",  // or "D:/2_Y2/newclone" — pick one
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,6 +116,9 @@ main
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+
   }
 }]]></component>
   <component name="RecentsManager">
@@ -322,9 +325,6 @@ main
       <workItem from="1743429581804" duration="1471000" />
       <workItem from="1743494421084" duration="14220000" />
       <workItem from="1743528057550" duration="1243000" />
-feature/user-management
-      <workItem from="1744954049755" duration="18000" />
-=======
 <workItem from="1743583997601" duration="2692000" />
 <workItem from="1743593760727" duration="930000" />
 <workItem from="1743801534805" duration="600000" />
@@ -332,12 +332,14 @@ feature/user-management
 <workItem from="1744219633857" duration="594000" />
 <workItem from="1744807887969" duration="2683000" />
 <workItem from="1744870283334" duration="2114000" />
-<workItem from="1744954049755" duration="18000" />
+<workItem from="1744954049755" duration="18000" /> <!-- From user-management -->
 <workItem from="1745211823569" duration="1120000" />
 <workItem from="1745230307024" duration="512000" />
-<workItem from="1745231572627" duration="2204000" />
+<workItem from="1745231572627" duration="4881000" /> <!-- Prefer longer duration from reservations-v2 -->
+<workItem from="1745391550876" duration="1850000" />
+<workItem from="1746042095009" duration="328000" />
+<workItem from="1746042602153" duration="1486000" />
 
- main
     </task>
     <servers />
   </component>
