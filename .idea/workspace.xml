@@ -7,6 +7,9 @@
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Restaurant2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Restaurant2Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,7 +412,7 @@
       <workItem from="1745231572627" duration="4881000" />
       <workItem from="1745391550876" duration="1850000" />
       <workItem from="1746042095009" duration="328000" />
-      <workItem from="1746042602153" duration="1486000" />
+      <workItem from="1746042602153" duration="2662000" />
     </task>
     <servers />
   </component>
