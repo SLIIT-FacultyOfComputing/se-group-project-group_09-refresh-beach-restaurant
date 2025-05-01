@@ -87,7 +87,7 @@ const MyReservations = () => {
     // Function to render a reservation card
     const renderReservationCard = (reservation) => (
         <div key={reservation.id} 
-             className="bg-blue-800 mb-4 p-4 rounded shadow-md text-white">
+             className="bg-white mb-4 p-4 rounded shadow-md text-black">
             <div className="flex justify-between">
                 <div>
                     <h3 className="text-xl font-semibold text-yellow-600">
@@ -98,7 +98,7 @@ const MyReservations = () => {
                         <span className={`
                             px-2 py-1 rounded text-xs 
                             ${reservation.status === 'CANCELED' ? 'bg-red-500' : 
-                              reservation.status === 'UPCOMING' ? 'bg-green-600' : 'bg-gray-500'}
+                              reservation.status === 'UPCOMING' ? 'bg-green-700' : 'bg-gray-700'}
                         `}>
                             {reservation.status}
                         </span>
@@ -119,18 +119,18 @@ const MyReservations = () => {
     );
 
     return (
-        <div className="relative w-full h-screen bg-cover bg-center" 
-             style={{ backgroundImage: "url('/images/reservation.jpg')" }}>
-            <div className="absolute inset-0 bg-black bg-opacity-80 flex flex-col items-center pt-16">
-                <h1 className="text-4xl font-bold mb-8 text-white">My Reservations</h1>
+        <div className="min-h-screen w-full bg-white bg-opacity-90 flex flex-col items-center pt-16 pb-16">
+
+        <h1 className="text-4xl font-bold mb-8 text-black ">My Reservations</h1>
                 
                 {/* Tabs for switching between upcoming and past reservations */}
-                <div className="flex mb-8 bg-blue-900 rounded-lg p-1 w-2/3 max-w-3xl">
-                    <button 
+            <div className="flex mb-8 bg-white rounded-lg p-1 w-2/3 max-w-3xl border border-black">
+
+            <button
                         className={`flex-1 py-2 px-4 rounded-lg font-medium text-lg ${
                             activeTab === 'upcoming' 
-                                ? 'bg-blue-700 text-yellow-600' 
-                                : 'text-white hover:bg-blue-800'
+                                ? 'bg-green-700 text-black' 
+                                : 'text-black hover:bg-green-700'
                         }`}
                         onClick={() => setActiveTab('upcoming')}
                     >
@@ -139,8 +139,8 @@ const MyReservations = () => {
                     <button 
                         className={`flex-1 py-2 px-4 rounded-lg font-medium text-lg ${
                             activeTab === 'past' 
-                                ? 'bg-blue-700 text-yellow-600' 
-                                : 'text-white hover:bg-blue-800'
+                                ? 'bg-gray-700 text-black' 
+                                : 'text-black hover:bg-gray-700'
                         }`}
                         onClick={() => setActiveTab('past')}
                     >
@@ -171,7 +171,7 @@ const MyReservations = () => {
                 >
                     Back to Home
                 </button>
-            </div>
+
         </div>
     );
 };
