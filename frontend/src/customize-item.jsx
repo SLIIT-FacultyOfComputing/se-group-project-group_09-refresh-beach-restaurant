@@ -3,7 +3,7 @@
 import { useState } from "react"
 import styled from "styled-components"
 
-// Global styles for the font to match cart page
+
 const GlobalStyle = styled.div`
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -342,7 +342,7 @@ const CustomizeItem = ({ onClose, onAddToCart, itemData }) => {
         ],
       }
     }
-    //Example for Chicken options
+    // Example for Chicken options
     else if (item.name.toLowerCase().includes("chicken")) {
       return {
         sizes: [
@@ -363,7 +363,7 @@ const CustomizeItem = ({ onClose, onAddToCart, itemData }) => {
         ],
       }
     }
-    
+   
     // Default options for other items
     else {
       return {
@@ -479,7 +479,7 @@ const CustomizeItem = ({ onClose, onAddToCart, itemData }) => {
     <GlobalStyle>
       <Container>
         <Card>
-          {/* Header is now inside the card */}
+          
           <CardHeader>
             <BackButton onClick={onClose}>
               <BackIcon />
