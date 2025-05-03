@@ -243,5 +243,4 @@ const styles = {
         textAlign: 'center',
     },
 };
-
 export default UpdateProfile;
