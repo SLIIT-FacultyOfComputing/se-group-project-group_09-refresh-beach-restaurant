@@ -4,12 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="" />
+feature/user-management
+=======
+=======
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/database/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/database/README.md" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/logo.jpeg" beforeDir="false" />
+
     </list>
+    main
+main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +39,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -52,102 +70,6 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/core/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/eslint-parser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-compilation-targets/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-create-class-features-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/helper-create-regexp-features-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/plugin-transform-runtime/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/preset-env/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@eslint/eslintrc/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@isaacs/cliui/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@istanbuljs/load-nyc-config/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@jest/reporters/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@jest/transform/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@rollup/pluginutils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@svgr/hast-util-to-babel-ast/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@testing-library/jest-dom/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/accepts/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/acorn-globals/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/ajv-formats/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/babel-loader/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/babel-plugin-polyfill-corejs2/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/body-parser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/chokidar/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/clean-css/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/coa/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/compression/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/css-minimizer-webpack-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/css-select/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/csso/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/cssstyle/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/default-gateway/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/detect-port-alt/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/domexception/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/escodegen/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-import-resolver-node/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-module-utils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-import/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-jsx-a11y/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-plugin-react/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint-webpack-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/eslint/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/express/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/fast-glob/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/file-loader/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/finalhandler/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/fork-ts-checker-webpack-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/global-prefix/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/hpack.js/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/import-fresh/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-instrument/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-report/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/istanbul-lib-source-maps/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-runtime/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-watch-typeahead/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jest-worker/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/jsonpath/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/make-dir/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/npm-run-path/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/path-scurry/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/pkg-up/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-modules-local-by-default/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-modules-scope/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/postcss-svgo/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/pretty-format/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/prop-types/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/proxy-addr/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/raw-body/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/react-dev-utils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/regjsparser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/renderkid/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/rollup-plugin-terser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/schema-utils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/send/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/serve-index/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/source-map-support/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/stack-utils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/static-eval/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/string-width-cjs/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/string-width/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/sucrase/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/svgo/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tailwindcss/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tempy/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/terser/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tough-cookie/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tsconfig-paths/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/tsutils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/v8-to-istanbul/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack-dev-server/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack-manifest-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/webpack/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/whatwg-encoding/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/workbox-build/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/workbox-webpack-plugin/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/write-file-atomic/package.json" />
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -159,48 +81,57 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BackendApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (2).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (3).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (4).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Restaurant2Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.backend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/reservations-v2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+<component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BackendApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BackendApplication (1).executor": "Run",
+    "Spring Boot.BackendApplication (2).executor": "Run",
+    "Spring Boot.BackendApplication (3).executor": "Run",
+    "Spring Boot.BackendApplication (4).executor": "Run",
+    "Spring Boot.BackendApplication.executor": "Run",
+    "Spring Boot.Restaurant2Application.executor": "Run",
+    "Spring Boot.backend.executor": "Run",
+    "git-widget-placeholder": "feature/reservations-v2",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Desktop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+
+  }
+}]]></component>
+
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.refreshbeach.backend" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2_Y2\newclone" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\Y2S2\SE\Project\v1" />
@@ -319,13 +250,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Restaurant2Application" />
-      <item itemvalue="Spring Boot.backend" />
       <item itemvalue="Spring Boot.BackendApplication (1)" />
       <item itemvalue="Spring Boot.BackendApplication (2)" />
       <item itemvalue="Spring Boot.BackendApplication (3)" />
       <item itemvalue="Spring Boot.BackendApplication (4)" />
       <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="Spring Boot.Restaurant2Application" />
+      <item itemvalue="Spring Boot.backend" />
     </list>
     <recent_temporary>
       <list>
@@ -340,8 +271,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
       </set>
     </attachedChunks>
   </component>
@@ -399,23 +330,25 @@
       <workItem from="1743429581804" duration="1471000" />
       <workItem from="1743494421084" duration="14220000" />
       <workItem from="1743528057550" duration="1243000" />
-      <workItem from="1743583997601" duration="2692000" />
-      <workItem from="1743593760727" duration="930000" />
-      <workItem from="1743801534805" duration="600000" />
-      <workItem from="1743850259829" duration="601000" />
-      <workItem from="1744219633857" duration="594000" />
-      <workItem from="1744807887969" duration="2683000" />
-      <workItem from="1744870283334" duration="2114000" />
-      <workItem from="1745211823569" duration="1120000" />
-      <workItem from="1745230307024" duration="512000" />
-      <workItem from="1745231572627" duration="4881000" />
-      <workItem from="1745391550876" duration="1850000" />
-      <workItem from="1746042095009" duration="328000" />
-      <workItem from="1746042602153" duration="4979000" />
-      <workItem from="1746124616009" duration="2865000" />
-      <workItem from="1746192686308" duration="57000" />
-      <workItem from="1746195349379" duration="264000" />
-      <workItem from="1746381176066" duration="2073000" />
+<workItem from="1743583997601" duration="2692000" />
+<workItem from="1743593760727" duration="930000" />
+<workItem from="1743801534805" duration="600000" />
+<workItem from="1743850259829" duration="601000" />
+<workItem from="1744219633857" duration="594000" />
+<workItem from="1744807887969" duration="2683000" />
+<workItem from="1744870283334" duration="2114000" />
+<workItem from="1744954049755" duration="18000" /> <!-- From user-management -->
+<workItem from="1745211823569" duration="1120000" />
+<workItem from="1745230307024" duration="512000" />
+<workItem from="1745231572627" duration="4881000" /> <!-- Prefer longer duration from reservations-v2 -->
+<workItem from="1745391550876" duration="1850000" />
+<workItem from="1746042095009" duration="328000" />
+<workItem from="1746042602153" duration="4979000" /> <!-- Prefer longer duration from reservations-v2 -->
+<workItem from="1746124616009" duration="2865000" />
+<workItem from="1746192686308" duration="57000" />
+<workItem from="1746195349379" duration="264000" />
+<workItem from="1746381176066" duration="2073000" />
+
     </task>
     <servers />
   </component>
@@ -451,10 +384,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/feature/user-management-fe" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="error fix 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="error fix 2" />
   </component>
 </project>
