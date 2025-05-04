@@ -11,6 +11,7 @@ import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Retryable;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
@@ -32,6 +33,27 @@ public class ReservationService {
         this.tableRepository = tableRepository;
     }
 
+    // Scheduled task to update reservation statuses
+    // Runs every hour (3600000 ms)
+    @Scheduled(fixedRate = 3600000)
+    @Transactional
+    public void updatePastReservations() {
+        LocalDate currentDate = LocalDate.now();
+        LocalTime currentTime = LocalTime.now();
+        
+        System.out.println("Running scheduled task to update past reservations...");
+        
+        List<Reservation> pastReservations = reservationRepository.findPastUpcomingReservations(currentDate, currentTime);
+        
+        System.out.println("Found " + pastReservations.size() + " reservations to update to PAST status");
+        
+        for (Reservation reservation : pastReservations) {
+            reservation.setStatus(ReservationStatus.PAST);
+            reservationRepository.save(reservation);
+            System.out.println("Updated reservation #" + reservation.getId() + " to PAST status");
+        }
+    }
+
     @Transactional
     public Reservation saveReservation(Reservation reservation) {
         // Set default values for the new fields
@@ -51,7 +73,31 @@ public class ReservationService {
     }
     
     public List<Reservation> getReservationsByCustomerId(Long customerId) {
-        return reservationRepository.findByCustomerId(customerId);
+        LocalDate currentDate = LocalDate.now();
+        LocalTime currentTime = LocalTime.now();
+        
+        // Update any past reservations before returning the list
+        List<Reservation> pastReservations = reservationRepository.findPastUpcomingReservations(currentDate, currentTime);
+        for (Reservation reservation : pastReservations) {
+            reservation.setStatus(ReservationStatus.PAST);
+            reservationRepository.save(reservation);
+        }
+        
+        // Get all reservations for the customer
+        List<Reservation> customerReservations = reservationRepository.findByCustomerId(customerId);
+        
+        // Fetch table information for each reservation
+        for (Reservation reservation : customerReservations) {
+            // Get the table number for each reservation
+            if (reservation.getTableId() != null) {
+                Optional<RestaurantTable> table = tableRepository.findById(reservation.getTableId().longValue());
+                if (table.isPresent()) {
+                    reservation.setTableNumber(table.get().getTableNumber());
+                }
+            }
+        }
+        
+        return customerReservations;
     }
     
     @Retryable(

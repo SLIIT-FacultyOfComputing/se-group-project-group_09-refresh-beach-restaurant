@@ -11,6 +11,8 @@ feature/user-management
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
 <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
 <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
@@ -100,10 +102,10 @@ main
     "Spring Boot.BackendApplication.executor": "Run",
     "Spring Boot.Restaurant2Application.executor": "Run",
     "Spring Boot.backend.executor": "Run",
-    "git-widget-placeholder": "feature/reservations-v2",  // or "feature/user-management" — pick one
+    "git-widget-placeholder": "feature/reservations-v2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/Desktop/reservation/restaurant2",  // or "D:/2_Y2/newclone" — pick one
+    "last_opened_file_path": "C:/Users/User/Desktop",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -116,6 +118,9 @@ main
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "ts.external.directory.path": "C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+
   }
 }]]></component>
 
@@ -338,7 +343,11 @@ main
 <workItem from="1745231572627" duration="4881000" /> <!-- Prefer longer duration from reservations-v2 -->
 <workItem from="1745391550876" duration="1850000" />
 <workItem from="1746042095009" duration="328000" />
-<workItem from="1746042602153" duration="1486000" />
+<workItem from="1746042602153" duration="4979000" /> <!-- Prefer longer duration from reservations-v2 -->
+<workItem from="1746124616009" duration="2865000" />
+<workItem from="1746192686308" duration="57000" />
+<workItem from="1746195349379" duration="264000" />
+<workItem from="1746381176066" duration="2073000" />
 
     </task>
     <servers />
