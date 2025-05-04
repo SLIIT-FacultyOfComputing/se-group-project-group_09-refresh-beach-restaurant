@@ -83,7 +83,21 @@ public class ReservationService {
             reservationRepository.save(reservation);
         }
         
-        return reservationRepository.findByCustomerId(customerId);
+        // Get all reservations for the customer
+        List<Reservation> customerReservations = reservationRepository.findByCustomerId(customerId);
+        
+        // Fetch table information for each reservation
+        for (Reservation reservation : customerReservations) {
+            // Get the table number for each reservation
+            if (reservation.getTableId() != null) {
+                Optional<RestaurantTable> table = tableRepository.findById(reservation.getTableId().longValue());
+                if (table.isPresent()) {
+                    reservation.setTableNumber(table.get().getTableNumber());
+                }
+            }
+        }
+        
+        return customerReservations;
     }
     
     @Retryable(

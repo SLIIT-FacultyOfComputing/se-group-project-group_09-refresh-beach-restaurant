@@ -50,5 +50,9 @@ public class Reservation {
     
     @Transient
     private String contactNumber;
+    
+    // Transient field to store the table number
+    @Transient
+    private int tableNumber;
 }
 

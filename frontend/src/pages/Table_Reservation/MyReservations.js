@@ -90,10 +90,10 @@ const MyReservations = () => {
              className="bg-white mb-4 p-4 rounded shadow-md text-black">
             <div className="flex justify-between">
                 <div>
-                    <h3 className="text-xl font-semibold text-yellow-600">
+                    <h3 className="text-xl font-semibold text-black">
                         {reservation.reservationDate.toString()} at {formatTime(reservation.reservationTime)}
                     </h3>
-                    <p>Table {reservation.tableId} · {reservation.peopleCount || 2} guests</p>
+                    <p>Table {reservation.tableNumber || reservation.tableId} - {reservation.peopleCount || 2} guests</p>
                     <p className="mt-1">
                         <span className={`
                             px-2 py-1 rounded text-xs 
@@ -106,7 +106,7 @@ const MyReservations = () => {
                 </div>
                 {reservation.status === 'UPCOMING' && (
                     <div>
-                        <button 
+                        <button
                             className="bg-red-600 hover:bg-red-700 px-3 py-1 rounded"
                             onClick={() => handleCancelReservation(reservation.id)}
                         >
@@ -167,7 +167,7 @@ const MyReservations = () => {
                 
                 <button
                     onClick={() => navigate("/")}
-                    className="mt-8 bg-blue-700 hover:bg-blue-800 text-yellow-600 font-bold text-lg py-3 px-8 rounded"
+                    className="mt-8 bg-white text-black font-bold text-lg py-3 px-8 rounded border border-black hover:bg-gray-400 hover:text-white hover:border-0 "
                 >
                     Back to Home
                 </button>
