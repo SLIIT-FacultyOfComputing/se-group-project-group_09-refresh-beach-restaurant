@@ -16,9 +16,6 @@ import EditAddress from './components/EditAddress';
 import PaymentMethods from './components/PaymentMethods';
 
 
-
-
-
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userRole, setUserRole] = useState(null);
