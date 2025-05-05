@@ -33,6 +33,7 @@ public class UserDTO {
     private String phoneNumber;
 
     private UserRole role;
+    private NotificationPreferencesDTO notificationPreferences;
 
     private boolean enabled;
 

@@ -84,7 +84,7 @@ public class AuthService {
         notificationService.createNotification(
                 savedUser,
                 "Welcome to our restaurant! Thank you for signing up.",
-                Notification.NotificationType.ACCOUNT_CREATION
+                Notification.NotificationType.PROMOTION
         );
 
         UserDetails userDetails = org.springframework.security.core.userdetails.User

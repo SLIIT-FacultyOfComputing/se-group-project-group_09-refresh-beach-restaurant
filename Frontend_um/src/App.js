@@ -16,9 +16,6 @@ import EditAddress from './components/EditAddress';
 import PaymentMethods from './components/PaymentMethods';
 
 
-
-
-
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userRole, setUserRole] = useState(null);
@@ -38,9 +35,7 @@ function App() {
             <div>
                 {isLoggedIn && (
                     <nav style={{ padding: '20px', backgroundColor: '#f4f4f4' }}>
-                        <Link to={userRole === 'admin' ? '/admin-dashboard' : '/user-dashboard'} style={{ marginRight: '10px' }}>
-                            Dashboard
-                        </Link>
+                        <Link to={userRole === 'admin' ? '/admin-dashboard' : '/user-dashboard'} style={{ marginRight: '10px' }}>Dashboard</Link>
 
                         {userRole !== 'admin' && (
                             <Link to="/profile/1" style={{ marginRight: '10px' }}>

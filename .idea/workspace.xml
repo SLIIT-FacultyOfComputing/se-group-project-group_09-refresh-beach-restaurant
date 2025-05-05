@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="" />
+<<<<<<< HEAD
+=======
 feature/user-management
 =======
 =======
@@ -23,6 +25,7 @@ feature/user-management
     </list>
     main
 main
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -330,6 +333,9 @@ main
       <workItem from="1743429581804" duration="1471000" />
       <workItem from="1743494421084" duration="14220000" />
       <workItem from="1743528057550" duration="1243000" />
+<<<<<<< HEAD
+      <workItem from="1744954049755" duration="18000" />
+=======
 <workItem from="1743583997601" duration="2692000" />
 <workItem from="1743593760727" duration="930000" />
 <workItem from="1743801534805" duration="600000" />
@@ -349,6 +355,7 @@ main
 <workItem from="1746195349379" duration="264000" />
 <workItem from="1746381176066" duration="2073000" />
 
+>>>>>>> origin/main
     </task>
     <servers />
   </component>

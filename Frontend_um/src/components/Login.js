@@ -2,6 +2,7 @@
 import { useNavigate, Link } from 'react-router-dom';
 import logo from '../assets/images/logo.jpeg'; // Import the logo image
 
+
 const Login = ({ onLogin }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
