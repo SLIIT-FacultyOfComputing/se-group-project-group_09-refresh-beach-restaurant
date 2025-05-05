@@ -40,6 +40,12 @@ public class Notification {
         ORDER_CONFIRMATION,
         PASSWORD_RESET,
         ACCOUNT_CREATION,
-        PROMOTIONAL
+        PROMOTIONAL,
+        ORDER_UPDATE,
+        PROMOTION,
+        RESERVATION_REMINDER,
+        MENU_UPDATE,
+        SPECIAL_EVENT
     }
+
 }

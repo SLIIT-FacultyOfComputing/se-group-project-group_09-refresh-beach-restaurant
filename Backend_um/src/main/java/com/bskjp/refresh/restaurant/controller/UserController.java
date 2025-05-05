@@ -6,17 +6,20 @@ import com.bskjp.refresh.restaurant.model.Order;
 import com.bskjp.refresh.restaurant.security.CustomUserDetailsService;
 import com.bskjp.refresh.restaurant.service.NotificationService;
 import com.bskjp.refresh.restaurant.service.UserService;
-import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import jakarta.validation.Valid;
+
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 
     private final UserService userService;
@@ -31,14 +34,20 @@ public class UserController {
         this.notificationService = notificationService;
     }
 
-    @GetMapping("/profile")
-    public ResponseEntity<UserDTO> getUserProfile(@AuthenticationPrincipal UserDetails userDetails) throws Throwable {
-        return ResponseEntity.ok(userService.getUserByEmail(userDetails.getUsername()));
+    @GetMapping("/{userId}")
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long userId) {
+        UserDTO user = userService.getUserById(userId);
+        return ResponseEntity.ok(user);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @Valid @RequestBody UserDTO userDTO) throws Throwable {
-        return ResponseEntity.ok(userService.updateUser(id, userDTO));
+    @PutMapping("/update/{userId}")
+    public ResponseEntity<?> updateUser(@PathVariable Long userId, @RequestBody UserDTO userDTO) {
+        try {
+            userService.updateUser(userId, userDTO);
+            return ResponseEntity.ok().build();
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }
     }
 
     @PostMapping("/{userId}/addresses")
@@ -51,7 +60,7 @@ public class UserController {
             @PathVariable Long userId,
             @PathVariable Long addressId,
             @Valid @RequestBody Address address) throws Throwable {
-        return ResponseEntity.ok(userService.updateAddress(userId, addressId, address));
+        return (ResponseEntity<UserDTO>) ResponseEntity.ok();
     }
 
     @DeleteMapping("/{userId}/addresses/{addressId}")
@@ -64,7 +73,6 @@ public class UserController {
         return ResponseEntity.ok(userService.setDefaultAddress(userId, addressId));
     }
 
-    //  ORDER HISTORY ENDPOINT
     @GetMapping("/{userId}/orders")
     public ResponseEntity<List<Order>> getOrderHistory(@PathVariable Long userId) throws Throwable {
         return ResponseEntity.ok(userService.getOrderHistory(userId));

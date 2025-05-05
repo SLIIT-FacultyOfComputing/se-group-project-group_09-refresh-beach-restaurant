@@ -17,6 +17,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -48,6 +49,9 @@ public class User {
     @JoinColumn(name = "user_id")
     private List<PaymentMethod> paymentMethods = new ArrayList<>();
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private NotificationPreferences notificationPreferences;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
@@ -72,6 +76,18 @@ public class User {
     }
 
     public List<Order> getOrders() {
-        return List.of();
+        return List.of(); // Placeholder: implement if needed
+    }
+
+    // Bi-directional setup method
+    public void setNotificationPreferences(NotificationPreferences notificationPreferences) {
+        if (notificationPreferences == null) {
+            if (this.notificationPreferences != null) {
+                this.notificationPreferences.setUser(null);
+            }
+        } else {
+            notificationPreferences.setUser(this);
+        }
+        this.notificationPreferences = notificationPreferences;
     }
 }
