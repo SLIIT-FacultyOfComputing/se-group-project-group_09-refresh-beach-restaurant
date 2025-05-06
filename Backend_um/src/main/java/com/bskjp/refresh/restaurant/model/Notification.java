@@ -36,6 +36,7 @@ public class Notification {
     @CreationTimestamp
     private LocalDateTime createdAt;
 
+
     public enum NotificationType {
         ORDER_CONFIRMATION,
         PASSWORD_RESET,
