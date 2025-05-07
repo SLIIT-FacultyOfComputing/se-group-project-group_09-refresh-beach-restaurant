@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import styled from "styled-components"
 import { useNavigate, useParams } from "react-router-dom"
 
@@ -510,6 +510,36 @@ const ItemTotalPrice = styled.span`
   display: block;
 `
 
+// Order summary section
+const OrderSummarySection = styled.div`
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+`
+
+const SummaryItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+`
+
+const SummaryLabel = styled.span`
+  color: #6b7280;
+  font-size: 0.875rem;
+`
+
+const SummaryValue = styled.span`
+  font-size: 0.875rem;
+  font-weight: 500;
+`
+
+const TotalItem = styled(SummaryItem)`
+  font-weight: 600;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+`
+
 // Icons
 const BackIcon = () => (
   <svg
@@ -650,8 +680,10 @@ const MoreIcon = () => (
 const OrderTracking = () => {
   const navigate = useNavigate()
   const { orderId } = useParams()
+  const [orderData, setOrderData] = useState(null)
+  const [loading, setLoading] = useState(true)
 
-  // Sample data
+  // Sample data for fallback
   const [orderStatus, setOrderStatus] = useState("delivery")
   const [estimatedTime, setEstimatedTime] = useState("5 - 8 min")
 
@@ -659,6 +691,22 @@ const OrderTracking = () => {
   const handleBackClick = () => {
     navigate("/cart")
   }
+
+  // Load order data from localStorage
+  useEffect(() => {
+    setLoading(true)
+    try {
+      const savedOrder = localStorage.getItem("currentOrder")
+      if (savedOrder) {
+        const parsedOrder = JSON.parse(savedOrder)
+        setOrderData(parsedOrder)
+      }
+    } catch (error) {
+      console.error("Error loading order data:", error)
+    } finally {
+      setLoading(false)
+    }
+  }, [])
 
   const orderHistory = [
     {
@@ -684,7 +732,8 @@ const OrderTracking = () => {
     },
   ]
 
-  const orderItems = [
+  // Use order items from localStorage or fallback to sample data
+  const orderItems = orderData?.items || [
     {
       id: 1,
       name: "Margherita Pizza",
@@ -692,7 +741,7 @@ const OrderTracking = () => {
       tag: "NEW",
       quantity: 2,
       price: 3900,
-      totalPrice: 5800,
+      totalPrice: 7800,
     },
     {
       id: 2,
@@ -706,6 +755,13 @@ const OrderTracking = () => {
     },
   ]
 
+  // Get order totals from localStorage or calculate from items
+  const orderTotals = orderData?.totals || {
+    subtotal: orderItems.reduce((sum, item) => sum + (item.totalPrice || item.price * item.quantity), 0),
+    deliveryFee: 270.0,
+    total: orderItems.reduce((sum, item) => sum + (item.totalPrice || item.price * item.quantity), 0) + 270.0,
+  }
+
   return (
     <GlobalStyle>
       <Container>
@@ -715,7 +771,7 @@ const OrderTracking = () => {
           </BackButton>
           <OrderInfo>
             <OrderTitle>Order Details</OrderTitle>
-            <OrderNumber>Order / #{orderId || "2034945456"}</OrderNumber>
+            <OrderNumber>Order / #{orderData?.orderId || orderId || "2034945456"}</OrderNumber>
           </OrderInfo>
           <SearchContainer>
             <SearchIconContainer>
@@ -783,17 +839,19 @@ const OrderTracking = () => {
               <ItemsList>
                 {orderItems.map((item) => (
                   <ItemCard key={item.id}>
-                    <ItemImage src={item.image} alt={item.name} />
+                    <ItemImage src={item.imageUrl || item.image} alt={item.name} />
                     <ItemDetails>
                       <ItemTop>
-                        <ItemTag>{item.tag}</ItemTag>
+                        <ItemTag>{item.tag || "ITEM"}</ItemTag>
                         <ItemName>{item.name}</ItemName>
                       </ItemTop>
                       <ItemBottom>
                         <ItemQuantity>x{item.quantity}</ItemQuantity>
                         <ItemPrices>
-                          <ItemPrice>LKR {item.price.toFixed(1)}</ItemPrice>
-                          <ItemTotalPrice>LKR {item.totalPrice.toFixed(1)}</ItemTotalPrice>
+                          <ItemPrice>LKR {item.price.toFixed(2)}</ItemPrice>
+                          <ItemTotalPrice>
+                            LKR {(item.totalPrice || item.price * item.quantity).toFixed(2)}
+                          </ItemTotalPrice>
                         </ItemPrices>
                       </ItemBottom>
                     </ItemDetails>
@@ -801,6 +859,23 @@ const OrderTracking = () => {
                 ))}
               </ItemsList>
             </ItemsContainer>
+
+            {/* Order Summary Section */}
+            <OrderSummarySection>
+              <SectionTitle>Order Summary</SectionTitle>
+              <SummaryItem>
+                <SummaryLabel>Subtotal</SummaryLabel>
+                <SummaryValue>LKR {orderTotals.subtotal.toFixed(2)}</SummaryValue>
+              </SummaryItem>
+              <SummaryItem>
+                <SummaryLabel>Delivery Fee</SummaryLabel>
+                <SummaryValue>LKR {orderTotals.deliveryFee.toFixed(2)}</SummaryValue>
+              </SummaryItem>
+              <TotalItem>
+                <SummaryLabel>Total</SummaryLabel>
+                <SummaryValue>LKR {orderTotals.total.toFixed(2)}</SummaryValue>
+              </TotalItem>
+            </OrderSummarySection>
           </MainContent>
 
           <SideContent>
