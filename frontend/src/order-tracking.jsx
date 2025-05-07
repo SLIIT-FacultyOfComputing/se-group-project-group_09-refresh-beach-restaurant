@@ -230,7 +230,7 @@ const SideContent = styled.div`
 `
 
 const DeliveryStatus = styled.div`
-  background-color: #0040ff;
+  background-color:rgb(108, 5, 5);
   color: white;
   padding: 1rem;
   border-radius: 0.5rem;
@@ -395,7 +395,7 @@ const TimelineDot = styled.div`
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
-  background-color: #0040ff;
+  background-color: rgb(108, 5, 5);
 `
 
 const TimelineContent = styled.div`
