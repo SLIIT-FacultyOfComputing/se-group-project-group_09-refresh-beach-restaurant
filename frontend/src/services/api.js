@@ -71,7 +71,7 @@ export const getAvailableTables = async (date, time) => {
   }
 };
 
-export const createReservation = async (customerId, tableId, reservationDate, reservationTime) => {
+export const createReservation = async (customerId, tableId, reservationDate, reservationTime, peopleCount, contactNumber, customerEmail) => {
   try {
     const response = await fetch(`${API_BASE_URL}/reservations/reserve`, {
       method: 'POST',
@@ -84,6 +84,9 @@ export const createReservation = async (customerId, tableId, reservationDate, re
         tableId,
         reservationDate,
         reservationTime,
+        peopleCount,
+        contactNumber,
+        customerEmail
       }),
     });
     return await response.json();

@@ -5,6 +5,8 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
     const [isReserving, setIsReserving] = useState(false);
     const [reservationStatus, setReservationStatus] = useState(null);
     const [reservationSuccess, setReservationSuccess] = useState(false);
+    const [email, setEmail] = useState("");
+    const [showReservationForm, setShowReservationForm] = useState(false);
     const navigate = useNavigate();
 
     // Helper function to convert 12-hour time format to 24-hour format
@@ -44,6 +46,16 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
             return;
         }
 
+        if (!showReservationForm) {
+            setShowReservationForm(true);
+            return;
+        }
+
+        if (!email) {
+            alert("Please enter your email for reservation reminders!");
+            return;
+        }
+
         // Format the date as YYYY-MM-DD
         const formattedDate = selectedDate instanceof Date 
             ? selectedDate.toISOString().split('T')[0] 
@@ -59,8 +71,9 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
             customerId: 1, // For now, use a default customer ID
             reservationDate: formattedDate,
             reservationTime: formattedTime,
-            peopleCount: 2, // Default number of guests
-            contactNumber: "555-555-5555" // Default contact number
+            peopleCount: 2, // Default number of people
+            contactNumber: "555-555-5555", // Default contact number
+            customerEmail: email
         };
 
         console.log("Sending reservation data:", reservationData);
@@ -127,13 +140,29 @@ const ConfirmReservationButton = ({ tableId, selectedDate, selectedTime, tableNa
 
     return (
         <div className="text-center">
+            {showReservationForm ? (
+                <div className="mb-4 bg-blue-800 p-4 rounded-lg">
+                    <div className="mb-3">
+                        <label className="block text-yellow-500 font-bold mb-2">Email (for reservation reminder)</label>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="email@example.com"
+                            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            required
+                        />
+                    </div>
+                </div>
+            ) : null}
+            
             {!reservationSuccess ? (
                 <button
                     className={`mt-4 px-6 py-3 ${isReserving ? 'bg-gray-500' : 'bg-yellow-500 hover:bg-yellow-600'} text-black font-bold rounded-lg`}
                     onClick={handleConfirm}
                     disabled={isReserving}
                 >
-                    {isReserving ? "Processing..." : `Confirm Reservation`}
+                    {isReserving ? "Processing..." : showReservationForm ? "Complete Reservation" : "Confirm Reservation"}
                 </button>
             ) : (
                 <button
