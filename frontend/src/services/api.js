@@ -116,4 +116,34 @@ export const cancelReservation = async (reservationId) => {
     console.error('Cancel reservation error:', error);
     throw error;
   }
+};
+
+// Reservation Rating API calls
+export const rateReservation = async (reservationId, rating, reviewText) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/reservation-ratings/rate`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      credentials: 'include',
+      body: JSON.stringify({ reservationId, rating, reviewText }),
+    });
+    return await response.json();
+  } catch (error) {
+    console.error('Rate reservation error:', error);
+    throw error;
+  }
+};
+
+export const checkReservationRating = async (reservationId) => {
+  try {
+    const response = await fetch(`${API_BASE_URL}/reservation-ratings/check/${reservationId}`, {
+      credentials: 'include',
+    });
+    return await response.json();
+  } catch (error) {
+    console.error('Check reservation rating error:', error);
+    throw error;
+  }
 }; 
