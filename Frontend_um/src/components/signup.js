@@ -9,6 +9,7 @@ const SignUp = () => {
         password: '',
         confirmPassword: '',
         phoneNumber: ''
+
     });
 
     const handleChange = (e) => {
