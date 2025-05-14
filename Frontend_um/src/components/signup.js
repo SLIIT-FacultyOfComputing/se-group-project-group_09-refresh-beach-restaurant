@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const SignUp = () => {
     const [formData, setFormData] = useState({
-        name: '',
+        firstName: '',
+        lastName: '',
         email: '',
         password: '',
         confirmPassword: '',
+        phoneNumber: ''
     });
 
     const handleChange = (e) => {
@@ -13,13 +16,23 @@ const SignUp = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        if (formData.password === formData.confirmPassword) {
-            // Submit the form data (Here you can connect it with your backend later)
-            alert('Sign up successful');
-        } else {
+        if (formData.password !== formData.confirmPassword) {
             alert('Passwords do not match');
+            return;
+        }
+
+        try {
+            const response = await axios.post('http://localhost:8080/api/auth/signup', {
+                email: formData.email,
+                password: formData.password,
+                role: 'user' // or 'admin' depending on how you define it
+            });
+
+            alert(response.data);
+        } catch (error) {
+            alert(error.response?.data || 'Signup failed');
         }
     };
 
@@ -30,24 +43,24 @@ const SignUp = () => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <input
-                        type="Name"
+                        type="text"
                         name="firstName"
-                        value={formData.Name}
+                        value={formData.firstName}
                         onChange={handleChange}
-                        placeholder="firstName"
+                        placeholder="First Name"
                         required
-                        style={{padding: '10px', marginBottom: '10px', width: '40%'}}
+                        style={{ padding: '10px', marginBottom: '10px', width: '40%' }}
                     />
                 </div>
                 <div>
                     <input
-                        type="Name"
+                        type="text"
                         name="lastName"
-                        value={formData.Name}
+                        value={formData.lastName}
                         onChange={handleChange}
-                        placeholder="lastName"
+                        placeholder="Last Name"
                         required
-                        style={{padding: '10px', marginBottom: '10px', width: '40%'}}
+                        style={{ padding: '10px', marginBottom: '10px', width: '40%' }}
                     />
                 </div>
                 <div>
@@ -58,7 +71,7 @@ const SignUp = () => {
                         onChange={handleChange}
                         placeholder="Email"
                         required
-                        style={{padding: '10px', marginBottom: '10px', width: '40%'}}
+                        style={{ padding: '10px', marginBottom: '10px', width: '40%' }}
                     />
                 </div>
                 <div>
@@ -69,21 +82,29 @@ const SignUp = () => {
                         onChange={handleChange}
                         placeholder="Password"
                         required
-                        style={{padding: '10px', marginBottom: '10px', width: '40%'}}
+                        style={{ padding: '10px', marginBottom: '10px', width: '40%' }}
                     />
                 </div>
-
-
-
                 <div>
                     <input
-                        type="phone number"
-                        name="phoneNumber"
-                        value={formData.Name}
+                        type="password"
+                        name="confirmPassword"
+                        value={formData.confirmPassword}
                         onChange={handleChange}
-                        placeholder="phoneNumber"
+                        placeholder="Confirm Password"
                         required
-                        style={{padding: '10px', marginBottom: '10px', width: '40%'}}
+                        style={{ padding: '10px', marginBottom: '10px', width: '40%' }}
+                    />
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        name="phoneNumber"
+                        value={formData.phoneNumber}
+                        onChange={handleChange}
+                        placeholder="Phone Number"
+                        required
+                        style={{ padding: '10px', marginBottom: '10px', width: '40%' }}
                     />
                 </div>
                 <div>

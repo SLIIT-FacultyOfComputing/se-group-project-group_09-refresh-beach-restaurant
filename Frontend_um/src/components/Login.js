@@ -2,29 +2,45 @@
 import { useNavigate, Link } from 'react-router-dom';
 import logo from '../assets/images/logo.jpeg'; // Import the logo image
 
-
 const Login = ({ onLogin }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => { 
         e.preventDefault();
 
-        // Simulate login process (You would replace this with an actual API call)
-        const mockUserData = { email: 'admin@example.com', password: 'admin', role: 'admin' }; // Mock user data
-        const mockNormalUserData = { email: 'user@example.com', password: 'user', role: 'user' }; // Mock normal user data
+        try {
+            const response = await fetch('http://localhost:8080/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include',
+                body: JSON.stringify({ email, password })
+            });
 
-        if ((email === mockUserData.email && password === mockUserData.password) || (email === mockNormalUserData.email && password === mockNormalUserData.password)) {
-            const role = email === mockUserData.email ? 'admin' : 'user';  // Set role based on email
-            onLogin(role); // Set the role after login
-            if (role === 'admin') {
-                navigate('/admin-dashboard');  // Redirect to Admin Dashboard
-            } else {
-                navigate('/user-dashboard');  // Redirect to User Dashboard
+            if (!response.ok) {
+                throw new Error('Invalid credentials');
             }
-        } else {
-            alert('Invalid credentials');
+
+            const data = await response.json();
+            console.log('Login response:', data);
+
+            const role = data.role; // "admin" or "user"
+            onLogin(role); // Set the role after login
+
+            if (role === 'admin') {
+                navigate('/admin-dashboard'); // Redirect to Admin Dashboard
+            } else {
+                navigate('/user-dashboard'); // Redirect to User Dashboard
+            }
+
+            // Optionally store token in localStorage for further authenticated requests
+            localStorage.setItem('token', data.token);
+
+        } catch (error) {
+            alert(error.message);
         }
     };
 
