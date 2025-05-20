@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -80,5 +81,14 @@ public class ReservationRatingService {
      */
     public Optional<ReservationRating> getRatingForReservation(Long reservationId) {
         return ratingRepository.findByReservationId(reservationId);
+    }
+    
+    /**
+     * Get all reservation ratings
+     * This is primarily for admin use
+     * @return List of all reservation ratings
+     */
+    public List<ReservationRating> getAllRatings() {
+        return ratingRepository.findAll();
     }
 } 

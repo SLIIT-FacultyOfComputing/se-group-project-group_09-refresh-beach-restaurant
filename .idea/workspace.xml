@@ -6,8 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationRatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/Controller/ReservationRatingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/ReservationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/repository/ReservationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationRatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationRatingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/update_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/update_tables.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +75,6 @@
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/@jest/reporters/package.json" />
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/@jest/transform/package.json" />
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/@rollup/pluginutils/package.json" />
-    <dismissed value="$PROJECT_DIR$/frontend/node_modules/@svgr/hast-util-to-babel-ast/package.json" />
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/@testing-library/jest-dom/package.json" />
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/accepts/package.json" />
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/acorn-globals/package.json" />
@@ -158,45 +167,45 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BackendApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (2).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (3).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication (4).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BackendApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.Restaurant2Application.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.backend.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/reservations-v2&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Desktop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.BackendApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BackendApplication (1).executor": "Run",
+    "Spring Boot.BackendApplication (2).executor": "Run",
+    "Spring Boot.BackendApplication (3).executor": "Run",
+    "Spring Boot.BackendApplication (4).executor": "Run",
+    "Spring Boot.BackendApplication.executor": "Run",
+    "Spring Boot.Restaurant2Application.executor": "Run",
+    "Spring Boot.backend.executor": "Run",
+    "git-widget-placeholder": "feature/reservations-v2",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/User/Documents/Y2S2/SE/Project/SE_Project/v1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Users\\User\\AppData\\Local\\Programs\\IntelliJ IDEA Ultimate\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.refreshbeach.backend" />
@@ -416,7 +425,9 @@
       <workItem from="1746195349379" duration="264000" />
       <workItem from="1746381176066" duration="4559000" />
       <workItem from="1746852134583" duration="318000" />
-      <workItem from="1746852473417" duration="1557000" />
+      <workItem from="1746852473417" duration="2383000" />
+      <workItem from="1746858697674" duration="5748000" />
+      <workItem from="1747739412824" duration="132000" />
     </task>
     <servers />
   </component>

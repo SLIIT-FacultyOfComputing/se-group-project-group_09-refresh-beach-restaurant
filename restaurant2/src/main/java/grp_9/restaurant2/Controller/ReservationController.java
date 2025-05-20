@@ -2,6 +2,7 @@ package grp_9.restaurant2.Controller;
 
 import grp_9.restaurant2.entity.Reservation;
 import grp_9.restaurant2.service.ReservationService;
+import grp_9.restaurant2.service.ReminderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -28,6 +29,9 @@ public class ReservationController {
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
+
+    @Autowired
+    private ReminderService reminderService;
 
     @PostConstruct
     public void initializeAndFixData() {
@@ -82,6 +86,8 @@ public class ReservationController {
                               Integer.parseInt(payload.get("peopleCount").toString()) : 4;
             String contactNumber = payload.containsKey("contactNumber") ? 
                                   payload.get("contactNumber").toString() : "555-123-4567";
+            String customerEmail = payload.containsKey("customerEmail") ?
+                                  payload.get("customerEmail").toString() : "";
             
             System.out.println("Processing reservation - tableId: " + tableId + ", customerId: " + customerId 
                         + ", date: " + dateStr + ", time: " + timeStr);
@@ -101,7 +107,7 @@ public class ReservationController {
             
             // Call service to create reservation
             Reservation savedReservation = reservationService.createReservation(
-                customerId, tableId, date, time, peopleCount, contactNumber);
+                customerId, tableId, date, time, peopleCount, contactNumber, customerEmail);
             
             System.out.println("Saved reservation with ID: " + savedReservation.getId());
             
@@ -164,6 +170,32 @@ public class ReservationController {
             return ResponseEntity.ok(response);
         } catch (Exception e) {
             response.put("error", "Failed to cancel reservation");
+            response.put("message", e.getMessage());
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
+        }
+    }
+
+    @PostMapping(value = "/test-email-reminder", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Map<String, Object>> testEmailReminder(@RequestBody Map<String, Object> payload) {
+        Map<String, Object> response = new HashMap<>();
+        
+        try {
+            // Check if a specific reservation ID was provided
+            if (payload.containsKey("reservationId")) {
+                Long reservationId = Long.valueOf(payload.get("reservationId").toString());
+                reminderService.sendReminderForReservation(reservationId);
+                response.put("success", true);
+                response.put("message", "Test email reminder sent for reservation ID: " + reservationId);
+            } else {
+                // Otherwise, run the full reminder process
+                reminderService.sendReservationReminders();
+                response.put("success", true);
+                response.put("message", "Test email reminders sent for all tomorrow's reservations");
+            }
+            
+            return ResponseEntity.ok(response);
+        } catch (Exception e) {
+            response.put("error", "Failed to send test email reminder");
             response.put("message", e.getMessage());
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(response);
         }
