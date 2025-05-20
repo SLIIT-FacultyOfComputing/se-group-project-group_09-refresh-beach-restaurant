@@ -51,6 +51,9 @@ public class Reservation {
     @Transient
     private String contactNumber;
     
+    @Column(name = "customer_email")
+    private String customerEmail;
+    
     // Transient field to store the table number
     @Transient
     private int tableNumber;

@@ -36,4 +36,10 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
     List<Reservation> findPastUpcomingReservations(
         @Param("currentDate") LocalDate currentDate,
         @Param("currentTime") LocalTime currentTime);
+        
+    // Find all UPCOMING reservations for a specific date
+    @Query("SELECT r FROM Reservation r WHERE " +
+           "r.status = grp_9.restaurant2.entity.ReservationStatus.UPCOMING AND " +
+           "r.reservationDate = :date")
+    List<Reservation> findUpcomingReservationsByDate(@Param("date") LocalDate date);
 }

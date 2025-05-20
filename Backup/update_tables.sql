@@ -37,4 +37,7 @@ ORDER BY t.table_id;
 -- For example, if tables under maintenance should stay OCCUPIED:
 -- UPDATE tables 
 -- SET status = 'OCCUPIED' 
--- WHERE table_id IN (42, 47); 
+-- WHERE table_id IN (42, 47);
+
+-- Add customer_email column to reservations table
+ALTER TABLE reservations ADD COLUMN customer_email VARCHAR(255) DEFAULT NULL;

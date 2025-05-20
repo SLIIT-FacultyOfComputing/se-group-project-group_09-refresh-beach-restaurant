@@ -107,10 +107,11 @@ public class ReservationService {
     )
     @Transactional(isolation = Isolation.SERIALIZABLE)
     public Reservation createReservation(Long customerId, Long tableId, LocalDate date, 
-                                        LocalTime time, int peopleCount, String contactNumber) {
+                                        LocalTime time, int peopleCount, String contactNumber, String customerEmail) {
         System.out.println("DEBUG: Creating reservation with customerId=" + customerId + 
                           ", tableId=" + tableId + ", date=" + date + ", time=" + time + 
-                          ", peopleCount=" + peopleCount + ", contactNumber=" + contactNumber);
+                          ", peopleCount=" + peopleCount + ", contactNumber=" + contactNumber +
+                          ", customerEmail=" + customerEmail);
                           
         // Use pessimistic locking to prevent concurrent modifications of the same table
         Optional<RestaurantTable> tableOpt = tableRepository.findByIdWithLock(tableId);
@@ -146,6 +147,7 @@ public class ReservationService {
         reservation.setPeopleCount(peopleCount);
         reservation.setPrice(0.0); // This could be calculated based on some business rules
         reservation.setContactNumber(contactNumber);
+        reservation.setCustomerEmail(customerEmail);
         reservation.setReservationDate(date);
         reservation.setReservationTime(time);
         reservation.setStatus(ReservationStatus.UPCOMING);
