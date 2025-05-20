@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="" />
+<<<<<<< HEAD
+=======
+feature/user-management
+=======
+=======
     <list default="true" id="1101cda5-76f1-4f36-ae7d-c32c2dbf6758" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
@@ -18,7 +25,23 @@
       <change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/update_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/update_tables.sql" afterDir="false" />
+=======
+<change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Table_Reservation/MyReservations.js" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/entity/Reservation.java" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/restaurant2/src/main/java/grp_9/restaurant2/service/ReservationService.java" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/ConfirmReservationButton.jsx" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/database/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/database/README.md" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Table_Reservation/reserveTable/TableLayout.jsx" afterDir="false" />
+<change beforePath="$PROJECT_DIR$/Frontend_um/Frontend_um/public/images/logo.jpeg" beforeDir="false" />
+
+>>>>>>> main
     </list>
+    main
+main
+>>>>>>> origin/main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +58,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -61,6 +89,7 @@
       </MavenImportingSettings>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/core/package.json" />
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/@babel/eslint-parser/package.json" />
@@ -156,6 +185,8 @@
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/workbox-webpack-plugin/package.json" />
     <dismissed value="$PROJECT_DIR$/frontend/node_modules/write-file-atomic/package.json" />
   </component>
+=======
+>>>>>>> main
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -167,7 +198,11 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
+=======
+<component name="PropertiesComponent"><![CDATA[{
+>>>>>>> main
   "keyToString": {
     "Application.BackendApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
@@ -191,7 +226,11 @@
     "git-widget-placeholder": "feature/reservations-v2",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+<<<<<<< HEAD
     "last_opened_file_path": "C:/Users/User/Documents/Y2S2/SE/Project/SE_Project/v1",
+=======
+    "last_opened_file_path": "C:/Users/User/Desktop",
+>>>>>>> main
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -206,9 +245,21 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+<<<<<<< HEAD
+=======
+
+  }
+}]]></component>
+
+  }
+}]]></component>
+>>>>>>> main
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.refreshbeach.backend" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\2_Y2\newclone" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\Y2S2\SE\Project\v1" />
@@ -327,13 +378,13 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.Restaurant2Application" />
-      <item itemvalue="Spring Boot.backend" />
       <item itemvalue="Spring Boot.BackendApplication (1)" />
       <item itemvalue="Spring Boot.BackendApplication (2)" />
       <item itemvalue="Spring Boot.BackendApplication (3)" />
       <item itemvalue="Spring Boot.BackendApplication (4)" />
       <item itemvalue="Spring Boot.BackendApplication" />
+      <item itemvalue="Spring Boot.Restaurant2Application" />
+      <item itemvalue="Spring Boot.backend" />
     </list>
     <recent_temporary>
       <list>
@@ -348,8 +399,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
       </set>
     </attachedChunks>
   </component>
@@ -407,6 +458,7 @@
       <workItem from="1743429581804" duration="1471000" />
       <workItem from="1743494421084" duration="14220000" />
       <workItem from="1743528057550" duration="1243000" />
+<<<<<<< HEAD
       <workItem from="1743583997601" duration="2692000" />
       <workItem from="1743593760727" duration="930000" />
       <workItem from="1743801534805" duration="600000" />
@@ -428,6 +480,31 @@
       <workItem from="1746852473417" duration="2383000" />
       <workItem from="1746858697674" duration="5748000" />
       <workItem from="1747739412824" duration="132000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1744954049755" duration="18000" />
+=======
+<workItem from="1743583997601" duration="2692000" />
+<workItem from="1743593760727" duration="930000" />
+<workItem from="1743801534805" duration="600000" />
+<workItem from="1743850259829" duration="601000" />
+<workItem from="1744219633857" duration="594000" />
+<workItem from="1744807887969" duration="2683000" />
+<workItem from="1744870283334" duration="2114000" />
+<workItem from="1744954049755" duration="18000" /> <!-- From user-management -->
+<workItem from="1745211823569" duration="1120000" />
+<workItem from="1745230307024" duration="512000" />
+<workItem from="1745231572627" duration="4881000" /> <!-- Prefer longer duration from reservations-v2 -->
+<workItem from="1745391550876" duration="1850000" />
+<workItem from="1746042095009" duration="328000" />
+<workItem from="1746042602153" duration="4979000" /> <!-- Prefer longer duration from reservations-v2 -->
+<workItem from="1746124616009" duration="2865000" />
+<workItem from="1746192686308" duration="57000" />
+<workItem from="1746195349379" duration="264000" />
+<workItem from="1746381176066" duration="2073000" />
+
+>>>>>>> origin/main
+>>>>>>> main
     </task>
     <servers />
   </component>
@@ -463,10 +540,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/feature/user-management-fe" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="error fix 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="error fix 2" />
   </component>
 </project>

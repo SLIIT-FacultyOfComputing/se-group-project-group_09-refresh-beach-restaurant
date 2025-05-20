@@ -19,6 +19,9 @@ const CustomerMenu = () => {
   const [reviewRating, setReviewRating] = useState(5)
   const [reviews, setReviews] = useState({})
 
+  // Add a new state for the search query near the other state declarations
+  const [searchQuery, setSearchQuery] = useState("")
+
   // Available customization options
   const customizationOptions = [
     { id: 1, name: "Add Cheese", price: 50 },
@@ -365,52 +368,77 @@ const CustomerMenu = () => {
     )
   }
 
+  // Add a search function that filters menu items based on the search query
+  const filteredMenuItems = (items) => {
+    if (!searchQuery.trim()) return items
+
+    return items.filter(
+      (item) =>
+        item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (item.description && item.description.toLowerCase().includes(searchQuery.toLowerCase())) ||
+        (item.foodType && item.foodType.toLowerCase().includes(searchQuery.toLowerCase())),
+    )
+  }
+
   // Add an alternative rendering method for the menu card footer that matches the image
   // Replace the existing renderMenuItems function with this updated version
 
   const renderMenuItems = () => {
     if (selectedType === "All") {
-      return Object.keys(groupedMenu).map((type) => (
-        <div key={type} className="food-category-section">
-          <h3 className="category-heading">
-            <span className="category-icon">{getCategoryIcon(type)}</span>
-            {type.toUpperCase()}
-          </h3>
-          <div className="menu-grid">
-            {groupedMenu[type].map((item) => (
-              <div key={item.id} className="menu-card">
-                <div className="menu-image-container">
-                  <img src={item.imageUrl || "/placeholder.svg"} alt={item.name} className="menu-image" />
-                  <div className="food-type-badge">
-                    <span className="type-icon">{getCategoryIcon(item.foodType)}</span>
-                    <span>{item.foodType}</span>
-                  </div>
-                </div>
-                <div className="menu-card-content">
-                  <h4>{item.name}</h4>
-                  <div className="menu-item-rating">
-                    {renderStars(getAverageRating(item.id))}
-                    <span className="review-count">{reviews[item.id] ? `(${reviews[item.id].length})` : "(0)"}</span>
-                  </div>
-                  <p className="menu-description">{item.description}</p>
-                  <div className="menu-card-footer">
-                    <p className="price">LKR {item.price}</p>
-                    <div className="menu-card-actions-compact">
-                      <button className="action-button review-button" onClick={() => handleReview(item)}>
-                        <span>★</span> Review
-                      </button>
-                      <button className="action-button add-button" onClick={() => addToCart(item)}>
-                        <span>🛒</span> Add
-                      </button>
+      return Object.keys(groupedMenu)
+        .map((type) => {
+          const filteredItems = filteredMenuItems(groupedMenu[type])
+
+          // Skip rendering empty categories when searching
+          if (searchQuery && filteredItems.length === 0) return null
+
+          return (
+            <div key={type} className="food-category-section">
+              <h3 className="category-heading">
+                <span className="category-icon">{getCategoryIcon(type)}</span>
+                {type.toUpperCase()}
+              </h3>
+              <div className="menu-grid">
+                {filteredItems.map((item) => (
+                  <div key={item.id} className="menu-card">
+                    <div className="menu-image-container">
+                      <img src={item.imageUrl || "/placeholder.svg"} alt={item.name} className="menu-image" />
+                      <div className="food-type-badge">
+                        <span className="type-icon">{getCategoryIcon(item.foodType)}</span>
+                        <span>{item.foodType}</span>
+                      </div>
+                    </div>
+                    <div className="menu-card-content">
+                      <h4>{item.name}</h4>
+                      <div className="menu-item-rating">
+                        {renderStars(getAverageRating(item.id))}
+                        <span className="review-count">
+                          {reviews[item.id] ? `(${reviews[item.id].length})` : "(0)"}
+                        </span>
+                      </div>
+                      <p className="menu-description">{item.description}</p>
+                      <div className="menu-card-footer">
+                        <p className="price">LKR {item.price}</p>
+                        <div className="menu-card-actions-compact">
+                          <button className="action-button review-button" onClick={() => handleReview(item)}>
+                            <span>★</span> Review
+                          </button>
+                          <button className="action-button add-button" onClick={() => addToCart(item)}>
+                            <span>🛒</span> Add
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      ))
+            </div>
+          )
+        })
+        .filter(Boolean) // Filter out null values (empty categories)
     } else {
+      const filteredItems = filteredMenuItems(groupedMenu[selectedType] || [])
+
       return (
         <div className="food-category-section">
           <h3 className="category-heading">
@@ -418,7 +446,7 @@ const CustomerMenu = () => {
             {selectedType.toUpperCase()}
           </h3>
           <div className="menu-grid">
-            {groupedMenu[selectedType]?.map((item) => (
+            {filteredItems.map((item) => (
               <div key={item.id} className="menu-card">
                 <div className="menu-image-container">
                   <img src={item.imageUrl || "/placeholder.svg"} alt={item.name} className="menu-image" />
@@ -477,12 +505,31 @@ const CustomerMenu = () => {
   }
 
   return (
-    <div className="customer-menu-container">
+    <div className="customer-menu-container elegant-theme">
       <div className="menu-header">
         <div className="restaurant-branding">
           <h1>Refresh Beach</h1>
           <p>Authentic Sri Lankan Cuisine</p>
         </div>
+
+        <div className="header-search">
+          <div className="search-bar">
+            <span className="search-icon">🔍</span>
+            <input
+              type="text"
+              placeholder="Search for dishes, categories..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            {searchQuery && (
+              <button className="clear-search" onClick={() => setSearchQuery("")}>
+                ×
+              </button>
+            )}
+          </div>
+          {searchQuery && <div className="search-results-info">Showing results for "{searchQuery}"</div>}
+        </div>
+
         <div className="cart-summary" onClick={() => setIsCartOpen(true)}>
           <span className="cart-icon">🛒</span>
           <span className="cart-count">{cart.length}</span>
@@ -632,7 +679,7 @@ const CustomerMenu = () => {
                 Cancel
               </button>
               <button className="save-customization-btn" onClick={saveCustomizations}>
-                Save 
+                Save Customizations
               </button>
             </div>
           </div>
@@ -702,5 +749,8 @@ const CustomerMenu = () => {
 }
 
 export default CustomerMenu
+
+
+
 
 

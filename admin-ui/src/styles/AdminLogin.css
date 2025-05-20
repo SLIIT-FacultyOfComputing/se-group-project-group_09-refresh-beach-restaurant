@@ -1,0 +1,116 @@
+.admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a3a5f 0%, #2c5282 100%);
+    padding: 1rem;
+  }
+  
+  .admin-login-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+  }
+  
+  .admin-login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .admin-login-header h2 {
+    color: #1a3a5f;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .admin-login-header p {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .admin-login-error {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .admin-login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    color: #1a3a5f;
+    font-size: 0.9rem;
+  }
+  
+  .form-group input {
+    padding: 0.8rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #1a3a5f;
+    box-shadow: 0 0 0 2px rgba(26, 58, 95, 0.2);
+  }
+  
+  .admin-login-button {
+    background-color: #d4af37;
+    color: #1a3a5f;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+  
+  .admin-login-button:hover {
+    background-color: #c49c2f;
+  }
+  
+  .admin-login-button:disabled {
+    background-color: #e2e8f0;
+    color: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  .admin-login-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .admin-login-footer a {
+    color: #1a3a5f;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  
+  .admin-login-footer a:hover {
+    text-decoration: underline;
+  }
+  
